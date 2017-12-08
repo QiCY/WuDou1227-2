@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDMyCollectViewController">
+            <connections>
+                <outlet property="tableView" destination="ilQ-bf-QUM" id="AQ2-cH-avB"/>
+                <outlet property="touView" destination="tsF-bp-07I" id="cWO-xU-h3h"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsF-bp-07I">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4Zc-Ep-j1R"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ilQ-bf-QUM">
+                    <rect key="frame" x="0.0" y="40" width="320" height="528"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="tw7-jx-g04"/>
+                        <outlet property="delegate" destination="-1" id="JKQ-pA-Hof"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ilQ-bf-QUM" firstAttribute="top" secondItem="tsF-bp-07I" secondAttribute="bottom" id="Cr4-Tq-aGa"/>
+                <constraint firstAttribute="bottom" secondItem="ilQ-bf-QUM" secondAttribute="bottom" id="JfA-lA-rSk"/>
+                <constraint firstItem="ilQ-bf-QUM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PGU-Dq-9nL"/>
+                <constraint firstItem="tsF-bp-07I" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="czz-TT-gCp"/>
+                <constraint firstItem="tsF-bp-07I" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dnI-xF-QUL"/>
+                <constraint firstItem="tsF-bp-07I" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="i55-Va-UNO"/>
+                <constraint firstItem="ilQ-bf-QUM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kAT-E9-hue"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

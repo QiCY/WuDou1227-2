@@ -1,0 +1,16 @@
+//
+//  WDNewsViewController.h
+//  WuDou
+//
+//  Created by huahua on 16/8/15.
+//  Copyright © 2016年 os1. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface WDNewsViewController : UIViewController
+
+/** 请求的URL*/
+@property(nonatomic, copy)NSString *requestUrl;
+
+@end

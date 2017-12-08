@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" id="KGk-i7-Jjw" customClass="PayTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="312" height="39"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在线支付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drk-4C-1w6">
+                        <rect key="frame" x="18" y="10" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="gMO-4r-ugZ"/>
+                            <constraint firstAttribute="width" constant="70" id="ykK-8T-0uV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(微信/支付宝)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-om-fQP">
+                        <rect key="frame" x="88" y="10" width="100" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="R2y-OK-wBM"/>
+                            <constraint firstAttribute="width" constant="100" id="dwN-Gk-hS6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="打钩" translatesAutoresizingMaskIntoConstraints="NO" id="S3H-sK-SuE">
+                        <rect key="frame" x="274" y="10" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="SrU-Xe-NkI"/>
+                            <constraint firstAttribute="height" constant="20" id="sqS-Uo-qOn"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKj-6t-1iY">
+                        <rect key="frame" x="264" y="0.0" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="1GA-Mq-kzk"/>
+                            <constraint firstAttribute="height" constant="40" id="dpe-Uq-yoK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="i2u-om-fQP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3m1-cl-Tup"/>
+                    <constraint firstItem="Drk-4C-1w6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4zS-3U-Y0w"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="S3H-sK-SuE" secondAttribute="trailing" constant="10" id="7hb-K5-Hfg"/>
+                    <constraint firstItem="S3H-sK-SuE" firstAttribute="centerX" secondItem="EKj-6t-1iY" secondAttribute="centerX" id="XCv-C8-KMd"/>
+                    <constraint firstItem="i2u-om-fQP" firstAttribute="leading" secondItem="Drk-4C-1w6" secondAttribute="trailing" id="YDs-ca-Lmq"/>
+                    <constraint firstItem="S3H-sK-SuE" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="20" id="YcO-cQ-mAc"/>
+                    <constraint firstItem="S3H-sK-SuE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qly-DY-sJa"/>
+                    <constraint firstItem="Drk-4C-1w6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="sTW-Rb-iwm"/>
+                    <constraint firstItem="S3H-sK-SuE" firstAttribute="centerY" secondItem="EKj-6t-1iY" secondAttribute="centerY" id="tab-sC-w7e"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="YcO-cQ-mAc"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-1" y="202"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="打钩" width="40" height="40"/>
+    </resources>
+</document>

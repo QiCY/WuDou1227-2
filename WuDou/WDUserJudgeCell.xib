@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="46" id="KGk-i7-Jjw" customClass="WDUserJudgeCell">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="46"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="433" height="45.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSi-aQ-XvL" customClass="StarView">
+                        <rect key="frame" x="10" y="10" width="90" height="18"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="9l8-iG-sJx"/>
+                            <constraint firstAttribute="height" constant="18" id="vcT-tR-4uL"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18355407806" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBv-jy-bQB">
+                        <rect key="frame" x="110" y="10" width="100" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="AWX-Kt-ge8"/>
+                            <constraint firstAttribute="width" constant="100" id="NUZ-pW-4bI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.78397435900000001" green="0.78397435900000001" blue="0.78397435900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-10-17 09:20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97n-LZ-R22">
+                        <rect key="frame" x="210" y="10" width="213" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="FvT-sn-aMU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.78397435900000001" green="0.78397435900000001" blue="0.78397435900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rSi-aQ-XvL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Cbu-DK-DUU"/>
+                    <constraint firstItem="rSi-aQ-XvL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="MQr-2k-m25"/>
+                    <constraint firstAttribute="trailing" secondItem="97n-LZ-R22" secondAttribute="trailing" constant="10" id="Qgd-rY-Eao"/>
+                    <constraint firstItem="HBv-jy-bQB" firstAttribute="leading" secondItem="rSi-aQ-XvL" secondAttribute="trailing" constant="10" id="UAj-oo-hu0"/>
+                    <constraint firstItem="HBv-jy-bQB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dcB-XU-DF8"/>
+                    <constraint firstItem="97n-LZ-R22" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wtN-um-cm4"/>
+                    <constraint firstItem="97n-LZ-R22" firstAttribute="leading" secondItem="HBv-jy-bQB" secondAttribute="trailing" id="ymN-DJ-9hm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="judgeAddTime" destination="97n-LZ-R22" id="VxH-FC-SGx"/>
+                <outlet property="judgeStarView" destination="rSi-aQ-XvL" id="s6R-Hm-4O8"/>
+                <outlet property="judgeUserName" destination="HBv-jy-bQB" id="DkA-OP-37L"/>
+            </connections>
+            <point key="canvasLocation" x="-84" y="-37"/>
+        </tableViewCell>
+    </objects>
+</document>

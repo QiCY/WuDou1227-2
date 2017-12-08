@@ -1,0 +1,52 @@
+//
+//  WDCommenUsed.pch
+//  WuDou
+//
+//  Created by huahua on 16/7/27.
+//  Copyright © 2016年 os1. All rights reserved.
+//
+
+#ifndef WDCommenUsed_pch
+#define WDCommenUsed_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define NSLog(...)
+#define debugMethod()
+#endif
+
+
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "UIView+WDExtention.h"
+#import "SVProgressHUD.h"
+#import "MJRefresh.h"
+
+// 屏幕的宽度
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+// 屏幕的高度
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+// 控制器背景颜色
+#define kViewControllerBackgroundColor [UIColor colorWithRed:240/255.0 green:239/255.0 blue:245/255.0 alpha:1.0]
+// 导航栏和其他控件背景颜色
+//#define KSYSTEM_COLOR [UIColor colorWithRed:67/255.0 green:172/255.0 blue:99/255.0 alpha:1.0]
+#define KSYSTEM_COLOR    [UIColor colorWithRed:107/255.0 green:169/255.0 blue:46/255.0 alpha:1]
+// 域名
+#define URL_LOGIN_STRING @"http://120.55.160.226:8091"
+#define URL_STRING @"http://120.55.160.226:8090"
+// API接口
+#define API_PORT @"http://app.ttsxin.com/"
+#define IMAGE_URL @"http://admin.ttsxin.com/njsqupfiles/"
+#define HTML5_URL @"http://admin.wudoll.com/"
+
+//accessToken
+#define ACCESS_TOKEN_KEY @"access_token"
+//提示框
+#define SHOW_ALERT(str)  UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:str delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];[alertView show];
+
+#endif /* WDCommenUsed_pch */

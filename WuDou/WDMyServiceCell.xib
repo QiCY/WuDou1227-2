@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="87" id="KGk-i7-Jjw" customClass="WDMyServiceCell">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qNY-2g-U4L">
+                        <rect key="frame" x="10" y="10" width="80" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="5sY-Kh-qv3"/>
+                            <constraint firstAttribute="width" constant="80" id="xjR-n9-5qL"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="长虹55寸液晶电视长虹55寸液晶电视" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYJ-Bm-5Eu">
+                        <rect key="frame" x="100" y="15" width="287" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="2fJ-ko-an8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="南通市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAX-BL-TxO">
+                        <rect key="frame" x="100" y="45" width="60" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="2eE-Pi-Uf3"/>
+                            <constraint firstAttribute="height" constant="20" id="7QN-5O-ctF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未审核" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HU-I4-ghe">
+                        <rect key="frame" x="324" y="45" width="50" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="TwE-bc-RiE"/>
+                            <constraint firstAttribute="width" constant="50" id="zGD-1o-Cds"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布于：19:35:08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmE-wg-Kvm">
+                        <rect key="frame" x="170" y="45" width="144" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="52R-GE-6s9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gAX-BL-TxO" firstAttribute="top" secondItem="uYJ-Bm-5Eu" secondAttribute="bottom" constant="10" id="0EI-N4-ITZ"/>
+                    <constraint firstItem="6HU-I4-ghe" firstAttribute="leading" secondItem="bmE-wg-Kvm" secondAttribute="trailing" constant="10" id="3R8-Iv-pxu"/>
+                    <constraint firstItem="bmE-wg-Kvm" firstAttribute="top" secondItem="uYJ-Bm-5Eu" secondAttribute="bottom" constant="10" id="4rQ-Na-aI5"/>
+                    <constraint firstItem="qNY-2g-U4L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="B3b-1d-sQ7"/>
+                    <constraint firstAttribute="trailing" secondItem="uYJ-Bm-5Eu" secondAttribute="trailing" constant="10" id="Ttb-8C-fWh"/>
+                    <constraint firstItem="bmE-wg-Kvm" firstAttribute="leading" secondItem="gAX-BL-TxO" secondAttribute="trailing" constant="10" id="gbf-wE-5Ze"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6HU-I4-ghe" secondAttribute="trailing" constant="15" id="iu4-cu-QzT"/>
+                    <constraint firstItem="uYJ-Bm-5Eu" firstAttribute="leading" secondItem="qNY-2g-U4L" secondAttribute="trailing" constant="10" id="oQT-KP-aHf"/>
+                    <constraint firstItem="uYJ-Bm-5Eu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="qQM-5K-srU"/>
+                    <constraint firstItem="6HU-I4-ghe" firstAttribute="top" secondItem="uYJ-Bm-5Eu" secondAttribute="bottom" constant="10" id="s4F-bp-OZ1"/>
+                    <constraint firstItem="qNY-2g-U4L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="sCw-J5-pXB"/>
+                    <constraint firstItem="gAX-BL-TxO" firstAttribute="leading" secondItem="qNY-2g-U4L" secondAttribute="trailing" constant="10" id="voA-eH-Eww"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="serviceChecked" destination="6HU-I4-ghe" id="Zc0-FP-dYt"/>
+                <outlet property="serviceImageView" destination="qNY-2g-U4L" id="p4i-Fq-gfi"/>
+                <outlet property="serviceRegine" destination="gAX-BL-TxO" id="Xga-Q2-t9p"/>
+                <outlet property="serviceTime" destination="bmE-wg-Kvm" id="S85-Pq-xyb"/>
+                <outlet property="serviceTitle" destination="uYJ-Bm-5Eu" id="1pD-lf-t96"/>
+            </connections>
+            <point key="canvasLocation" x="290.5" y="210.5"/>
+        </tableViewCell>
+    </objects>
+</document>

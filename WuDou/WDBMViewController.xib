@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDBMViewController">
+            <connections>
+                <outlet property="BMButtonView" destination="CVt-Oh-PtO" id="boO-12-rpq"/>
+                <outlet property="BMSearchBar" destination="Q9Y-5f-4VH" id="GZo-LZ-PQL"/>
+                <outlet property="BMTableView" destination="w2F-rk-tFf" id="Ht7-D1-lBi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="请输入类别或关键字" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Y-5f-4VH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Bsu-tL-wvn"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVt-Oh-PtO" userLabel="buttonView">
+                    <rect key="frame" x="0.0" y="44" width="375" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="lN8-c6-bpa"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w2F-rk-tFf">
+                    <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="572" id="B41-f1-uFv"/>
+                    </constraints>
+                </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="下划线2" translatesAutoresizingMaskIntoConstraints="NO" id="5dI-Eh-ecC">
+                    <rect key="frame" x="0.0" y="94" width="375" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Mvr-PD-vRv"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="w2F-rk-tFf" firstAttribute="trailing" secondItem="CVt-Oh-PtO" secondAttribute="trailing" id="79i-I7-bDR"/>
+                <constraint firstItem="CVt-Oh-PtO" firstAttribute="top" secondItem="Q9Y-5f-4VH" secondAttribute="bottom" id="7uA-Sl-urC"/>
+                <constraint firstItem="w2F-rk-tFf" firstAttribute="trailing" secondItem="Q9Y-5f-4VH" secondAttribute="trailing" id="7zy-RK-L9X"/>
+                <constraint firstItem="w2F-rk-tFf" firstAttribute="trailing" secondItem="5dI-Eh-ecC" secondAttribute="trailing" id="FPz-Er-wOd"/>
+                <constraint firstItem="w2F-rk-tFf" firstAttribute="leading" secondItem="Q9Y-5f-4VH" secondAttribute="leading" id="N8R-9I-lRa"/>
+                <constraint firstItem="w2F-rk-tFf" firstAttribute="leading" secondItem="CVt-Oh-PtO" secondAttribute="leading" id="XMp-Kn-ou8"/>
+                <constraint firstItem="Q9Y-5f-4VH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aF3-8X-GdW"/>
+                <constraint firstAttribute="trailing" secondItem="w2F-rk-tFf" secondAttribute="trailing" id="fZd-ae-NSR"/>
+                <constraint firstItem="w2F-rk-tFf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hSA-Ex-nSq"/>
+                <constraint firstItem="w2F-rk-tFf" firstAttribute="top" secondItem="5dI-Eh-ecC" secondAttribute="bottom" id="htl-Vx-RF2"/>
+                <constraint firstItem="5dI-Eh-ecC" firstAttribute="top" secondItem="CVt-Oh-PtO" secondAttribute="bottom" id="qVr-ox-M3m"/>
+                <constraint firstAttribute="bottom" secondItem="w2F-rk-tFf" secondAttribute="bottom" id="sPq-h3-dhI"/>
+                <constraint firstItem="w2F-rk-tFf" firstAttribute="leading" secondItem="5dI-Eh-ecC" secondAttribute="leading" id="tTA-UQ-3RI"/>
+            </constraints>
+            <point key="canvasLocation" x="-183" y="47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="下划线2" width="750" height="1"/>
+    </resources>
+</document>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" id="KGk-i7-Jjw" customClass="PlaceTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSv-B1-pwg">
+                        <rect key="frame" x="18" y="8" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="On0-Uq-ZX3"/>
+                            <constraint firstAttribute="height" constant="20" id="Y80-tc-3cA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-4u-G68">
+                        <rect key="frame" x="98" y="8" width="204" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="7Mz-pz-1Yf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIT-kj-0in">
+                        <rect key="frame" x="18" y="28" width="304" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="fgi-CS-7IM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WSv-B1-pwg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="27u-2Q-o7G"/>
+                    <constraint firstItem="Amc-4u-G68" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="F0r-HZ-QKz"/>
+                    <constraint firstItem="RIT-kj-0in" firstAttribute="top" secondItem="Amc-4u-G68" secondAttribute="bottom" id="Omn-Ja-VUz"/>
+                    <constraint firstItem="Amc-4u-G68" firstAttribute="centerY" secondItem="WSv-B1-pwg" secondAttribute="centerY" id="Uex-hb-zbs"/>
+                    <constraint firstItem="RIT-kj-0in" firstAttribute="top" secondItem="Amc-4u-G68" secondAttribute="bottom" id="Zxk-71-hrV"/>
+                    <constraint firstItem="RIT-kj-0in" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="10" id="f1f-v7-zWa"/>
+                    <constraint firstItem="WSv-B1-pwg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="gHT-3x-wcW"/>
+                    <constraint firstItem="Amc-4u-G68" firstAttribute="leading" secondItem="WSv-B1-pwg" secondAttribute="trailing" constant="10" id="i2p-zo-qfV"/>
+                    <constraint firstItem="RIT-kj-0in" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="nV3-KF-k1V"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Amc-4u-G68" secondAttribute="trailing" constant="10" id="xve-g8-d7t"/>
+                    <constraint firstItem="RIT-kj-0in" firstAttribute="top" secondItem="WSv-B1-pwg" secondAttribute="bottom" id="yiO-se-Wlm"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Omn-Ja-VUz"/>
+                        <exclude reference="F0r-HZ-QKz"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="accountAddress" destination="RIT-kj-0in" id="RXK-g0-7lN"/>
+                <outlet property="accountName" destination="WSv-B1-pwg" id="hHo-iR-CiT"/>
+                <outlet property="accountNumber" destination="Amc-4u-G68" id="kgc-6J-cI7"/>
+            </connections>
+            <point key="canvasLocation" x="15" y="19"/>
+        </tableViewCell>
+    </objects>
+</document>

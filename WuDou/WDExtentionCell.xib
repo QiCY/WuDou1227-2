@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WDExtentionCell">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="103"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="103"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水果图标" translatesAutoresizingMaskIntoConstraints="NO" id="KOy-vu-smC">
+                        <rect key="frame" x="10" y="5" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="0wp-SQ-sjC"/>
+                            <constraint firstAttribute="width" constant="60" id="p7N-LV-0os"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="果蔬生鲜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRZ-6D-Xjy">
+                        <rect key="frame" x="8" y="65" width="64" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="IeP-Jd-x4Y"/>
+                            <constraint firstAttribute="width" constant="64" id="Ihp-3x-YVM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="KOy-vu-smC" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Eq8-YJ-Nhd"/>
+                <constraint firstItem="pRZ-6D-Xjy" firstAttribute="top" secondItem="KOy-vu-smC" secondAttribute="bottom" id="L1F-fj-wOk"/>
+                <constraint firstItem="KOy-vu-smC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Z2i-95-Och"/>
+                <constraint firstItem="pRZ-6D-Xjy" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="nRB-xx-nyU"/>
+            </constraints>
+            <size key="customSize" width="80" height="103"/>
+            <connections>
+                <outlet property="extentionImageView" destination="KOy-vu-smC" id="6Ut-1z-yhh"/>
+                <outlet property="extentionLabel" destination="pRZ-6D-Xjy" id="Vwr-VQ-0zr"/>
+            </connections>
+            <point key="canvasLocation" x="29" y="203"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="水果图标" width="201" height="201"/>
+    </resources>
+</document>

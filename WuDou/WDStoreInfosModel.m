@@ -1,0 +1,36 @@
+//
+//  WDStoreInfosModel.m
+//  WuDou
+//
+//  Created by huahua on 16/9/13.
+//  Copyright © 2016年 os1. All rights reserved.
+//
+
+#import "WDStoreInfosModel.h"
+
+@implementation WDStoreInfosModel
+
++(id)userWithDictionary:(NSDictionary*)userDic{
+    
+    return [[self alloc]initWithDictionary:userDic];
+}
+
+-(id)initWithDictionary:(NSDictionary*)userDic{
+    
+    if (self = [super init])
+    {
+        NSString *imageName = [userDic[@"img"]copy];
+        _img = [NSString stringWithFormat:@"%@%@",IMAGE_URL,imageName];
+        _storeid = [userDic[@"storeid"]copy];
+        _name = [userDic[@"name"]copy];
+        _startvalue = [userDic[@"startvalue"]copy];
+        _startfee = [userDic[@"startfee"]copy];
+        _productscount = [userDic[@"productscount"]copy];
+        _monthlysales = [userDic[@"monthlysales"]copy];
+        _hasfavorite = [userDic[@"hasfavorite"]copy];
+        _hascoupons = [userDic[@"hascoupons"]copy];
+    }
+    return self ;
+}
+
+@end

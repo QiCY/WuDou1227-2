@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDLocationViewController">
+            <connections>
+                <outlet property="addressTableView" destination="YKQ-CF-tRT" id="QYZ-tg-uzE"/>
+                <outlet property="locTableView" destination="GMJ-QL-lX6" id="Sm6-Wu-C5F"/>
+                <outlet property="searchBar" destination="rOQ-2L-RiV" id="fUK-WG-9ov"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="写字楼、小区、学校" translatesAutoresizingMaskIntoConstraints="NO" id="rOQ-2L-RiV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="qXp-Nm-eHU"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GMJ-QL-lX6">
+                    <rect key="frame" x="0.0" y="54" width="375" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="9Nu-tT-f9s"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ftK-Tn-zE0"/>
+                        <outlet property="delegate" destination="-1" id="nn6-px-bl0"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YKQ-CF-tRT">
+                    <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="boQ-0p-1XC"/>
+                        <outlet property="delegate" destination="-1" id="Qf1-kA-7XS"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YKQ-CF-tRT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DBi-th-Drt"/>
+                <constraint firstItem="rOQ-2L-RiV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="EQ6-8f-Cq2"/>
+                <constraint firstItem="YKQ-CF-tRT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GSl-cM-KdR"/>
+                <constraint firstAttribute="bottom" secondItem="YKQ-CF-tRT" secondAttribute="bottom" id="Hnc-lF-biK"/>
+                <constraint firstItem="rOQ-2L-RiV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KX8-o5-M0M"/>
+                <constraint firstItem="GMJ-QL-lX6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ukc-Xp-Hct"/>
+                <constraint firstItem="YKQ-CF-tRT" firstAttribute="top" secondItem="GMJ-QL-lX6" secondAttribute="bottom" constant="10" id="Z3z-HZ-W0q"/>
+                <constraint firstItem="rOQ-2L-RiV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gfv-vP-ZPw"/>
+                <constraint firstItem="GMJ-QL-lX6" firstAttribute="top" secondItem="rOQ-2L-RiV" secondAttribute="bottom" constant="10" id="i6n-5w-uuV"/>
+                <constraint firstItem="GMJ-QL-lX6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uIw-PJ-KAy"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+        </view>
+    </objects>
+</document>

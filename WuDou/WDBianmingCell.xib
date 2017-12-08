@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="KGk-i7-Jjw" customClass="WDBianmingCell">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" userLabel="view">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="88.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如东县  发布于 : 10.25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jx-rg-hFc">
+                        <rect key="frame" x="100" y="45" width="278" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="TYd-GW-Mqg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-QY-xpc">
+                        <rect key="frame" x="10" y="10" width="80" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="ARe-Sb-1KB"/>
+                            <constraint firstAttribute="width" constant="80" id="b3t-gL-9td"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="长虹55寸液晶电视长虹55寸液晶电视" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwj-Wt-Yw8">
+                        <rect key="frame" x="100" y="15" width="278" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="73S-yx-ryc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qwj-Wt-Yw8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="32w-Fx-bOa"/>
+                    <constraint firstAttribute="trailing" secondItem="qwj-Wt-Yw8" secondAttribute="trailing" constant="10" id="JuN-kA-WdL"/>
+                    <constraint firstItem="5jx-rg-hFc" firstAttribute="top" secondItem="qwj-Wt-Yw8" secondAttribute="bottom" constant="10" id="Krm-d3-Cva"/>
+                    <constraint firstAttribute="trailing" secondItem="5jx-rg-hFc" secondAttribute="trailing" constant="10" id="PkJ-NB-3IC"/>
+                    <constraint firstItem="I8Q-QY-xpc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="kE9-H6-71a"/>
+                    <constraint firstItem="qwj-Wt-Yw8" firstAttribute="leading" secondItem="I8Q-QY-xpc" secondAttribute="trailing" constant="10" id="syg-xc-kUy"/>
+                    <constraint firstItem="5jx-rg-hFc" firstAttribute="leading" secondItem="I8Q-QY-xpc" secondAttribute="trailing" constant="10" id="uRg-n9-WXt"/>
+                    <constraint firstItem="I8Q-QY-xpc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wlj-qM-5Yy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bianmingInfos" destination="5jx-rg-hFc" id="38l-6d-TJk"/>
+                <outlet property="bianmingTitle" destination="qwj-Wt-Yw8" id="K18-3y-L1g"/>
+                <outlet property="bmImageView" destination="I8Q-QY-xpc" id="MZX-sr-fgO"/>
+            </connections>
+            <point key="canvasLocation" x="29" y="-39"/>
+        </tableViewCell>
+    </objects>
+</document>

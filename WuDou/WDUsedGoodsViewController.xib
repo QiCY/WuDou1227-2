@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDUsedGoodsViewController">
+            <connections>
+                <outlet property="usedGoodsBtnView" destination="BLo-ts-VIJ" id="kBn-CI-rZG"/>
+                <outlet property="usedGoodsSearchBar" destination="wmN-MK-jJi" id="sZJ-1p-7hv"/>
+                <outlet property="usedGoodsTableView" destination="ysz-I5-wWK" id="B83-DB-ROS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="请输入类别或关键字" translatesAutoresizingMaskIntoConstraints="NO" id="wmN-MK-jJi">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="5U2-x6-c4b"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-ts-VIJ" userLabel="buttonView">
+                    <rect key="frame" x="0.0" y="44" width="375" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="xed-O4-8Te"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="下划线2" translatesAutoresizingMaskIntoConstraints="NO" id="HcD-Fj-oCz">
+                    <rect key="frame" x="0.0" y="94" width="375" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ch4-Fr-4Qc"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ysz-I5-wWK">
+                    <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="BLo-ts-VIJ" secondAttribute="trailing" id="1oW-Vu-Lfr"/>
+                <constraint firstItem="wmN-MK-jJi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="44e-g8-Yut"/>
+                <constraint firstItem="BLo-ts-VIJ" firstAttribute="top" secondItem="wmN-MK-jJi" secondAttribute="bottom" id="86v-6t-1kR"/>
+                <constraint firstItem="BLo-ts-VIJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8Xg-fn-0hZ"/>
+                <constraint firstAttribute="trailing" secondItem="HcD-Fj-oCz" secondAttribute="trailing" id="DYO-te-dgI"/>
+                <constraint firstItem="HcD-Fj-oCz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LUY-72-EYh"/>
+                <constraint firstAttribute="bottom" secondItem="ysz-I5-wWK" secondAttribute="bottom" id="PNR-YP-rUA"/>
+                <constraint firstAttribute="trailing" secondItem="wmN-MK-jJi" secondAttribute="trailing" id="Vj1-1b-k8x"/>
+                <constraint firstItem="wmN-MK-jJi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Zev-Lk-a9T"/>
+                <constraint firstAttribute="trailing" secondItem="ysz-I5-wWK" secondAttribute="trailing" id="lRB-5H-6lD"/>
+                <constraint firstItem="ysz-I5-wWK" firstAttribute="top" secondItem="HcD-Fj-oCz" secondAttribute="bottom" id="rYY-Bc-nsW"/>
+                <constraint firstItem="HcD-Fj-oCz" firstAttribute="top" secondItem="BLo-ts-VIJ" secondAttribute="bottom" id="xju-4n-4y1"/>
+                <constraint firstItem="ysz-I5-wWK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ywV-Ve-iGz"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="下划线2" width="750" height="1"/>
+    </resources>
+</document>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDMineSettingViewController">
+            <connections>
+                <outlet property="headerBtn" destination="zXV-su-UwG" id="pFN-OZ-HUd"/>
+                <outlet property="headerView" destination="tVo-eB-76U" id="XcQ-PF-M1g"/>
+                <outlet property="settingTableView" destination="Qdg-Et-NsM" id="Yji-Vc-pys"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXV-su-UwG">
+                    <rect key="frame" x="158" y="40" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="VCn-8x-yE4"/>
+                        <constraint firstAttribute="height" constant="60" id="f1s-Nb-rys"/>
+                    </constraints>
+                    <connections>
+                        <action selector="changeHeaderImage:" destination="-1" eventType="touchUpInside" id="x7J-kd-fgY"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qdg-Et-NsM">
+                    <rect key="frame" x="0.0" y="120" width="375" height="176"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="176" id="sL8-YM-tj4"/>
+                    </constraints>
+                </tableView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="个人中心图标" translatesAutoresizingMaskIntoConstraints="NO" id="tVo-eB-76U">
+                    <rect key="frame" x="157" y="40" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="2XE-mk-nqC"/>
+                        <constraint firstAttribute="height" constant="60" id="WGR-W3-TKy"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNS-r3-4qd">
+                    <rect key="frame" x="10" y="316" width="354" height="40"/>
+                    <color key="backgroundColor" red="0.26274509800000001" green="0.67450980390000004" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="GgI-q5-s5p"/>
+                    </constraints>
+                    <state key="normal" title="退出">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="logout:" destination="-1" eventType="touchUpInside" id="cOV-CF-xoi"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Qdg-Et-NsM" firstAttribute="top" secondItem="tVo-eB-76U" secondAttribute="bottom" constant="20" id="0RF-eA-6oQ"/>
+                <constraint firstItem="Qdg-Et-NsM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1d8-Rg-kR3"/>
+                <constraint firstAttribute="trailing" secondItem="Qdg-Et-NsM" secondAttribute="trailing" id="1iS-98-e8F"/>
+                <constraint firstAttribute="bottom" secondItem="Qdg-Et-NsM" secondAttribute="bottom" id="61b-tv-LNL"/>
+                <constraint firstItem="zXV-su-UwG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="OGB-sU-p4d"/>
+                <constraint firstItem="tVo-eB-76U" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RTi-mO-yWR"/>
+                <constraint firstItem="tVo-eB-76U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="Tyv-fC-Y5I"/>
+                <constraint firstItem="zXV-su-UwG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="czG-1C-bSF"/>
+                <constraint firstItem="xNS-r3-4qd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="hgg-Le-LNS"/>
+                <constraint firstItem="xNS-r3-4qd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ipd-0P-2IN"/>
+                <constraint firstItem="xNS-r3-4qd" firstAttribute="top" secondItem="Qdg-Et-NsM" secondAttribute="bottom" constant="20" id="wHL-1e-tE8"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="61b-tv-LNL"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="29.5" y="120.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="个人中心图标" width="102" height="102"/>
+    </resources>
+</document>

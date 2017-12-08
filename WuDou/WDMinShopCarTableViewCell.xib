@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Mcell" rowHeight="41" id="KGk-i7-Jjw" customClass="WDMinShopCarTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="40.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="西班牙橙约600g/份" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRC-7A-dhs">
+                        <rect key="frame" x="8" y="10" width="164" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="TJe-Sb-3fu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥28.80" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPf-yj-VjD">
+                        <rect key="frame" x="172" y="10" width="60" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="NsH-AH-F2U"/>
+                            <constraint firstAttribute="height" constant="20" id="cmf-zp-CYr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.98901531040000001" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="减" translatesAutoresizingMaskIntoConstraints="NO" id="obd-Df-FzA">
+                        <rect key="frame" x="232" y="7.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="42b-Rt-11a"/>
+                            <constraint firstAttribute="height" constant="25" id="ly2-xz-2jn"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="加" translatesAutoresizingMaskIntoConstraints="NO" id="6XH-3L-rds">
+                        <rect key="frame" x="287" y="7.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="2EJ-or-Yxl"/>
+                            <constraint firstAttribute="width" constant="25" id="yxv-kk-VAh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ow-hM-9fc">
+                        <rect key="frame" x="257" y="10" width="30" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="B8t-sn-m1o"/>
+                            <constraint firstAttribute="width" constant="30" id="cwk-2t-jLP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jo-Xo-7o2">
+                        <rect key="frame" x="229.5" y="0.0" width="30" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="0D6-wO-d8h"/>
+                            <constraint firstAttribute="height" constant="40" id="bxm-Vq-Dx3"/>
+                        </constraints>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQY-2C-2S4">
+                        <rect key="frame" x="284.5" y="0.0" width="30" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="5mc-t3-aVx"/>
+                            <constraint firstAttribute="width" constant="30" id="ZyA-S7-eQ3"/>
+                        </constraints>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sPf-yj-VjD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0a0-2Q-Uyl"/>
+                    <constraint firstItem="obd-Df-FzA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DWS-tY-Kne"/>
+                    <constraint firstItem="6XH-3L-rds" firstAttribute="leading" secondItem="obd-Df-FzA" secondAttribute="trailing" constant="30" id="EFr-lt-5nK"/>
+                    <constraint firstItem="obd-Df-FzA" firstAttribute="leading" secondItem="sPf-yj-VjD" secondAttribute="trailing" id="HAd-UG-d50"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6XH-3L-rds" secondAttribute="trailing" id="QW6-c9-msz"/>
+                    <constraint firstItem="SRC-7A-dhs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="U7Z-be-uZ3"/>
+                    <constraint firstItem="obd-Df-FzA" firstAttribute="centerX" secondItem="4Jo-Xo-7o2" secondAttribute="centerX" id="WFs-fA-WPI"/>
+                    <constraint firstItem="obd-Df-FzA" firstAttribute="centerY" secondItem="4Jo-Xo-7o2" secondAttribute="centerY" id="Yeo-L8-WJ5"/>
+                    <constraint firstItem="sPf-yj-VjD" firstAttribute="leading" secondItem="SRC-7A-dhs" secondAttribute="trailing" id="a6X-Q7-RnT"/>
+                    <constraint firstItem="SRC-7A-dhs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dUB-yG-hVR"/>
+                    <constraint firstItem="6XH-3L-rds" firstAttribute="centerY" secondItem="QQY-2C-2S4" secondAttribute="centerY" id="fty-5F-twO"/>
+                    <constraint firstItem="7Ow-hM-9fc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gPR-bG-lmY"/>
+                    <constraint firstItem="6XH-3L-rds" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iGy-zZ-7lz"/>
+                    <constraint firstItem="6XH-3L-rds" firstAttribute="centerX" secondItem="QQY-2C-2S4" secondAttribute="centerX" id="wnn-4h-BbS"/>
+                    <constraint firstItem="6XH-3L-rds" firstAttribute="leading" secondItem="7Ow-hM-9fc" secondAttribute="trailing" id="zoA-TF-deo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addBtn" destination="4Jo-Xo-7o2" id="hrk-s5-NG5"/>
+                <outlet property="goodsName" destination="SRC-7A-dhs" id="D0B-6j-Edb"/>
+                <outlet property="goodsPrice" destination="sPf-yj-VjD" id="9Db-ER-gSY"/>
+                <outlet property="labelCount" destination="7Ow-hM-9fc" id="FKj-FQ-m7L"/>
+                <outlet property="subBtn" destination="QQY-2C-2S4" id="QQz-Te-ddn"/>
+            </connections>
+            <point key="canvasLocation" x="-19" y="-18"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="减" width="64" height="64"/>
+        <image name="加" width="64" height="64"/>
+    </resources>
+</document>

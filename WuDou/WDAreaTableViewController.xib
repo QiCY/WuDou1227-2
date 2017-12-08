@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDAreaTableViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4a-Cp-Ri3">
+                    <rect key="frame" x="10" y="30" width="137.5" height="0.0"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="gmr-NV-E9P"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已开通区域" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSX-oW-gh0">
+                    <rect key="frame" x="152.5" y="20" width="70" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="5bN-6C-zsI"/>
+                        <constraint firstAttribute="height" constant="20" id="oAp-1v-V3C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZ4-cz-WVO">
+                    <rect key="frame" x="227.5" y="30" width="137.5" height="0.0"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="L5Q-QK-D6K"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hSX-oW-gh0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="3qB-SB-V5R"/>
+                <constraint firstItem="hSX-oW-gh0" firstAttribute="top" secondItem="f4a-Cp-Ri3" secondAttribute="bottom" constant="20" id="Bak-yz-ynB"/>
+                <constraint firstItem="f4a-Cp-Ri3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="DgI-CA-gqv"/>
+                <constraint firstItem="hSX-oW-gh0" firstAttribute="centerY" secondItem="f4a-Cp-Ri3" secondAttribute="centerY" id="LK0-PJ-Cu8"/>
+                <constraint firstItem="hSX-oW-gh0" firstAttribute="leading" secondItem="f4a-Cp-Ri3" secondAttribute="trailing" constant="5" id="R6n-T5-3K5"/>
+                <constraint firstAttribute="trailing" secondItem="VZ4-cz-WVO" secondAttribute="trailing" constant="10" id="VWh-9I-9UM"/>
+                <constraint firstItem="VZ4-cz-WVO" firstAttribute="leading" secondItem="hSX-oW-gh0" secondAttribute="trailing" constant="5" id="cKM-pc-J1l"/>
+                <constraint firstItem="hSX-oW-gh0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iCt-ZL-qCt"/>
+                <constraint firstItem="VZ4-cz-WVO" firstAttribute="centerY" secondItem="f4a-Cp-Ri3" secondAttribute="centerY" id="pep-Wm-3e8"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Bak-yz-ynB"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-278" y="82"/>
+        </view>
+    </objects>
+</document>
