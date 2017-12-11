@@ -127,8 +127,8 @@
     self.salesCount.text = [NSString stringWithFormat:@"月销%@笔",model.monthlysales];
     self.distance.text = model.distance;
 //    self.minPrice.text = model.startfee;
-    [self setLabelString:self.minPrice text:[NSString stringWithFormat:@"起送：%@",[NSString stringWithFormat:@"￥%@",model.startfee]] subtext:[NSString stringWithFormat:@"￥%@",model.startfee]];
-    [self setLabelString:self.transPrice text:[NSString stringWithFormat:@"配送：%@",[NSString stringWithFormat:@"￥%@",model.startvalue]] subtext:[NSString stringWithFormat:@"￥%@",model.startvalue]];
+    [self setLabelString:self.minPrice text:[NSString stringWithFormat:@"起送：%@",[NSString stringWithFormat:@"￥%@",model.startvalue]] subtext:[NSString stringWithFormat:@"￥%@",model.startvalue]];
+    [self setLabelString:self.transPrice text:[NSString stringWithFormat:@"配送：%@",[NSString stringWithFormat:@"￥%@",model.startfee]] subtext:[NSString stringWithFormat:@"￥%@",model.startfee]];
 //    self.transPrice.text = model.startvalue;
     
    

@@ -10,7 +10,7 @@
 #import "WDMainRequestManager.h"
 
 @interface WDSearchViewController : UIViewController
-
+@property (nonatomic,strong)IBOutlet UIView *searchView;
 /* 搜索框 **/
 @property (weak, nonatomic) IBOutlet UITextField *searchShops;
 /* 取消按钮 **/

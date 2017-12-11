@@ -61,7 +61,10 @@
     if (_isZhiFuEnabled == 0) {
         
         UIButton *gotoZhifu = [[UIButton alloc] initWithFrame:CGRectMake(_showZhifuStateView.bounds.size.width * 0.5, 0, _showZhifuStateView.bounds.size.width * 0.5, _showZhifuStateView.bounds.size.height)];
-        [gotoZhifu setBackgroundImage:[UIImage imageNamed:@"立即支付.png"] forState:UIControlStateNormal];
+//        [gotoZhifu setBackgroundImage:[UIImage imageNamed:@"立即支付.png"] forState:UIControlStateNormal];
+        gotoZhifu.backgroundColor = KSYSTEM_COLOR;
+        gotoZhifu.titleLabel.font = [UIFont systemFontOfSize:14];
+        [gotoZhifu setTitle:@"立即支付" forState:UIControlStateNormal];
         [gotoZhifu addTarget:self action:@selector(gotoZhifuAction:) forControlEvents:UIControlEventTouchUpInside];
         [_showZhifuStateView addSubview:gotoZhifu];
     }

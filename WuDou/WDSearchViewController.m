@@ -93,7 +93,7 @@
     
     _searchShops.delegate = self;
     
-    
+    _searchView.backgroundColor = KSYSTEM_COLOR;
     _historyTableView.delegate = self;
     _historyTableView.dataSource = self;
     

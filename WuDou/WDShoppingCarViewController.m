@@ -99,7 +99,7 @@
     [_shopArr removeAllObjects];
     NSMutableArray *shopIdList = [[NSMutableArray alloc] init];
     for (WDChooseGood *good in dataList) {
-        NSLog(@"good shop id is %@ good name is %@",good.shopID,good.goodName);
+//        NSLog(@"good shop id is %@ good name is %@",good.shopID,good.goodName);
         if (![shopIdList containsObject:good.shopID]) {
             WDCarShop * carShop = [[WDCarShop alloc]init];
             carShop.shopID = good.shopID;
@@ -112,7 +112,7 @@
                  [shopIdList addObject:good.shopID];
             }
            
-            NSLog(@"good shop id is ------- %@",good.shopID);
+//            NSLog(@"good shop id is ------- %@",good.shopID);
         }
     }
     

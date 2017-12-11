@@ -9,6 +9,7 @@
 #import "WDGoodChoiceColllectionView.h"
 #import "WDGoodChoiceCell.h"
 #import "WDGoodsInfoViewController.h"
+#import "WDNearDetailsViewController.h"
 
 static NSString *string = @"WDGoodChoiceCell";
 
@@ -77,10 +78,22 @@ static NSString *string = @"WDGoodChoiceCell";
         [imgView sd_setImageWithURL:[NSURL URLWithString:adModel.img]];
         imgView.frame = CGRectMake(0, 0, kScreenWidth, 140);
         [header addSubview:imgView];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 140)];
+        button.tag = indexPath.section;
+        [button addTarget:self action:@selector(headerViewClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [header addSubview:button];
         return header;
         
     }
     return nil;
+}
+- (void)headerViewClicked:(UIButton *)sender{
+    WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+     WDAdvertisementModel *adModel = self.adList[sender.tag];
+    NSString *storeId = adModel.url;
+    nearVC.storeId = storeId;
+    [WDAppInitManeger saveStrData:storeId withStr:@"shopID"];
+    [_goodsInfoVC.navigationController pushViewController:nearVC animated:YES];
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     NSMutableArray *goodsArray = self.goodsList[section];
@@ -102,16 +115,15 @@ static NSString *string = @"WDGoodChoiceCell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     WDGoodsInfoViewController *infoVC = [[WDGoodsInfoViewController alloc]init];
-    
-    [_goodsInfoVC.navigationController pushViewController:infoVC animated:YES];
     NSMutableArray *goodsArray = self.goodsList[indexPath.section];
-//    WDGoodChoiceModel *model = goodsArray[indexPath.row];
-    
     WDGoodChoiceModel * youXuanGood = goodsArray[indexPath.row];
     NSString *goodsID = youXuanGood.pid;
     infoVC.goodsID = goodsID;
     infoVC.goodsImage = youXuanGood.img;
     [WDAppInitManeger saveStrData:goodsID withStr:@"goodID"];
+    [_goodsInfoVC.navigationController pushViewController:infoVC animated:YES];
+    
+    
     
 }
 

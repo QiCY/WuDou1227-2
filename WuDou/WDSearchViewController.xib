@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,6 +14,7 @@
                 <outlet property="cancelBtn" destination="nuo-qy-UCT" id="dDh-Xb-NZi"/>
                 <outlet property="historyTableView" destination="ikx-yR-VGB" id="OMJ-GI-wap"/>
                 <outlet property="searchShops" destination="YFZ-kj-Afl" id="sBn-A1-zZK"/>
+                <outlet property="searchView" destination="ATS-Hw-Bnn" id="Yfv-En-mQ5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -69,7 +70,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.26274509800000001" green="0.67450980390000004" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.2140324978" green="0.67450980390000004" blue="0.2462109948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="nuo-qy-UCT" firstAttribute="top" secondItem="ATS-Hw-Bnn" secondAttribute="top" constant="30" id="GEq-2O-XSK"/>
                         <constraint firstItem="nuo-qy-UCT" firstAttribute="leading" secondItem="jED-2U-Ge5" secondAttribute="trailing" constant="10" id="a9G-GR-n1f"/>

@@ -18,7 +18,7 @@
 #import "WDCollectViewController.h"
 #import "Product.h"
 #import "WDChooseCouponViewController.h"
-
+#import "BRPickerView.h"
 @interface WDAccountViewController ()<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 {
     UIView * _navView;
@@ -38,6 +38,7 @@
 @property(nonatomic,strong)NSMutableArray *discountList;
 @property(nonatomic,strong)UIPickerView *choicePickerView;
 @property(nonatomic,strong)WDMyCouponModel *coupon;
+@property(nonatomic,strong)WDSendTimeModel *transTime;
 
 @end
 
@@ -250,10 +251,9 @@
         }
         
         _timeDatas = array;
-        WDSendTimeModel *model = _timeDatas[0];
-        NSString *time = model.distributionDesn;
-        _sendTime = model.autotimeid;
-        [[NSUserDefaults standardUserDefaults] setObject:time forKey:@"PEISONGTIME"];
+        if (_timeDatas.count>0) {
+            self.transTime = _timeDatas.firstObject;
+        }
         
         [self.tableView reloadData];
         
@@ -420,31 +420,19 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
-//        if (indexPath.section == 2)
-//        {
-//            DiscountTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell5"];
-//            if (self.youhuiPrice) {
-//                CGFloat youhui = [self.youhuiPrice floatValue];
-//                cell.youhuiLabel.text = [NSString stringWithFormat:@"-￥%.2lf",youhui];
-//            }
-//            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//            return cell;
-//        }
+
         if (indexPath.section == 2) {
             
             WDPeisongTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell6"];
-            NSString *time = [[NSUserDefaults standardUserDefaults] objectForKey:@"PEISONGTIME"];
             cell.cellType.text = @"配送时间";
-            if (time != nil) {
-                
-                cell.cellTime.text = time;
+            if (self.transTime) {
+                cell.cellTime.text = self.transTime.distributionDesn;
                 cell.cellTime.textColor = [UIColor blackColor];
-            }
-            else{
+            }else{
                 cell.cellTime.text = @"请选择配送时间";
                 cell.cellTime.textColor = [UIColor lightGrayColor];
             }
+            
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;
@@ -482,13 +470,17 @@
                         [pics addObject:goodModel.goodImage];
                        
                     }
-                    if (allPrice < startPrice) {
+                    if (price < startPrice) {
                         allPrice = price + [model.goodDistributePrice floatValue];
+                        cell.yunFeiLabel.text = [NSString stringWithFormat:@"¥%@",model.goodDistributePrice];
+                    }else{
+                        allPrice = price;
+                        cell.yunFeiLabel.text = [NSString stringWithFormat:@"¥%@",@"0.0"];
                     }
-                    allPrice = price;
+                    
                     cell.goodPrice.text = [NSString stringWithFormat:@"¥%.2f",price];
                     cell.allPriceLabel.text = [NSString stringWithFormat:@"¥%.2f",allPrice];
-                    cell.yunFeiLabel.text = [NSString stringWithFormat:@"¥%@",model.goodDistributePrice];
+//                    cell.yunFeiLabel.text = [NSString stringWithFormat:@"¥%@",model.goodDistributePrice];
                     cell.numLabel.text = [NSString stringWithFormat:@"共%d件",allNum];
                     cell.picsArray = pics;
                 }
@@ -536,7 +528,7 @@
     
     WDPayViewController * payVC = [[WDPayViewController alloc]init];
     
-    [WDNearStoreManager requestSubmitOrderWithAddressId:self.addressId autoTimeId:_sendTime orderInfo:self.orderinfo buyyerMark:_beizhu completion:^(NSString *osn, NSString *paysn, NSString *error) {
+    [WDNearStoreManager requestSubmitOrderWithAddressId:self.addressId autoTimeId:self.transTime.autotimeid orderInfo:self.orderinfo buyyerMark:_beizhu completion:^(NSString *osn, NSString *paysn, NSString *error) {
         
         if (error) {
             
@@ -579,23 +571,36 @@
             addTV.sourceType = @"选择收货地址";
             [self.navigationController pushViewController:addTV animated:YES];
         }
-//        if (indexPath.section == 2) {
-//            
-//            WDChooseCouponViewController *unused = [[WDChooseCouponViewController alloc]init];
-//            NSString *count = [self.allcount.text substringFromIndex:1];
-//            unused.allCount = [count floatValue];
-//            
-//            [self.navigationController pushViewController:unused animated:YES];
-//        }
         if (indexPath.section == 2) {
+            NSMutableArray *couponList = [[NSMutableArray alloc] init];
+            for (WDSendTimeModel *model in _timeDatas) {
+                
+                [couponList addObject:model.distributionDesn];
+            }
+            [BRStringPickerView showStringPickerWithTitle:@"选择配送时间" dataSource:couponList defaultSelValue:couponList.firstObject isAutoSelect:NO resultBlock:^(id selectValue) {
+                NSLog(@"选择配送时间##########%@",selectValue);
+                NSInteger index = [couponList indexOfObject:selectValue];
+                self.transTime = _timeDatas[index];
+                [self.tableView reloadData];
+            }];
+//            [self _popToPickerView];
             
-//            [self _popToChoiceView];
-            [self _popToPickerView];
+        }if (indexPath.section == 5) {
+            if (self.discountList>0) {
+                NSMutableArray *couponList = [[NSMutableArray alloc] init];
+                for (WDMyCouponModel *model in self.discountList) {
+                    NSString *string = [NSString stringWithFormat:@"满%@减%@",model.orderamountlower,model.money];
+                    [couponList addObject:string];
+                }
+                
+                [BRStringPickerView showStringPickerWithTitle:@"选择优惠券" dataSource:couponList defaultSelValue:couponList.firstObject isAutoSelect:NO resultBlock:^(id selectValue) {
+                    NSLog(@"选择优惠券##########%@",selectValue);
+                    NSInteger index = [couponList indexOfObject:selectValue];
+                    self.coupon = self.discountList[index];
+                    [self.tableView reloadData];
+                }];
+            }
             
-            
-    
-//            _choiceTableView.frame = CGRectMake(0, kScreenHeight - (_timeDatas.count+1)*44 - 64, kScreenWidth, (_timeDatas.count+1)*44);
-//            [_choiceTableView reloadData];
         }
     }
     if (tableView == _choiceTableView) {

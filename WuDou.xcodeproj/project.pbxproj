@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18242DB81FDD39E2008C7B2B /* BRStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DAA1FDD39E2008C7B2B /* BRStringPickerView.m */; };
+		18242DB91FDD39E2008C7B2B /* BRDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DAE1FDD39E2008C7B2B /* BRDatePickerView.m */; };
+		18242DBA1FDD39E2008C7B2B /* BRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DB01FDD39E2008C7B2B /* BRBaseView.m */; };
+		18242DBB1FDD39E2008C7B2B /* BRAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DB31FDD39E2008C7B2B /* BRAddressModel.m */; };
+		18242DBC1FDD39E2008C7B2B /* BRCity.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18242DB61FDD39E2008C7B2B /* BRCity.plist */; };
+		18242DBD1FDD39E2008C7B2B /* BRAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DB71FDD39E2008C7B2B /* BRAddressPickerView.m */; };
+		18242DD51FDD3B5D008C7B2B /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DC21FDD3B5D008C7B2B /* MJPropertyType.m */; };
+		18242DD61FDD3B5D008C7B2B /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DC51FDD3B5D008C7B2B /* NSObject+MJKeyValue.m */; };
+		18242DD71FDD3B5D008C7B2B /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DC61FDD3B5D008C7B2B /* MJProperty.m */; };
+		18242DD81FDD3B5D008C7B2B /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DC81FDD3B5D008C7B2B /* NSObject+MJCoding.m */; };
+		18242DD91FDD3B5D008C7B2B /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DCA1FDD3B5D008C7B2B /* MJExtensionConst.m */; };
+		18242DDA1FDD3B5D008C7B2B /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DCB1FDD3B5D008C7B2B /* NSObject+MJProperty.m */; };
+		18242DDB1FDD3B5D008C7B2B /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DCD1FDD3B5D008C7B2B /* NSObject+MJClass.m */; };
+		18242DDC1FDD3B5D008C7B2B /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DCE1FDD3B5D008C7B2B /* NSString+MJExtension.m */; };
+		18242DDD1FDD3B5D008C7B2B /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DCF1FDD3B5D008C7B2B /* MJPropertyKey.m */; };
+		18242DDE1FDD3B5D008C7B2B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18242DD31FDD3B5D008C7B2B /* Info.plist */; };
+		18242DDF1FDD3B5D008C7B2B /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18242DD41FDD3B5D008C7B2B /* MJFoundation.m */; };
 		186301EE1FC2F1FB001BF7F6 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186301EC1FC2F1FA001BF7F6 /* StoreTableViewCell.m */; };
 		186301F51FC2F209001BF7F6 /* half_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186301F11FC2F209001BF7F6 /* half_star@2x.png */; };
 		186301F61FC2F209001BF7F6 /* XHLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186301F21FC2F209001BF7F6 /* XHLevelView.m */; };
@@ -384,6 +401,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18242DA91FDD39E2008C7B2B /* BRStringPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRStringPickerView.h; sourceTree = "<group>"; };
+		18242DAA1FDD39E2008C7B2B /* BRStringPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRStringPickerView.m; sourceTree = "<group>"; };
+		18242DAB1FDD39E2008C7B2B /* BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerView.h; sourceTree = "<group>"; };
+		18242DAD1FDD39E2008C7B2B /* BRDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRDatePickerView.h; sourceTree = "<group>"; };
+		18242DAE1FDD39E2008C7B2B /* BRDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRDatePickerView.m; sourceTree = "<group>"; };
+		18242DB01FDD39E2008C7B2B /* BRBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRBaseView.m; sourceTree = "<group>"; };
+		18242DB11FDD39E2008C7B2B /* BRBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBaseView.h; sourceTree = "<group>"; };
+		18242DB31FDD39E2008C7B2B /* BRAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressModel.m; sourceTree = "<group>"; };
+		18242DB41FDD39E2008C7B2B /* BRAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressPickerView.h; sourceTree = "<group>"; };
+		18242DB51FDD39E2008C7B2B /* BRAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressModel.h; sourceTree = "<group>"; };
+		18242DB61FDD39E2008C7B2B /* BRCity.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BRCity.plist; sourceTree = "<group>"; };
+		18242DB71FDD39E2008C7B2B /* BRAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressPickerView.m; sourceTree = "<group>"; };
+		18242DBF1FDD3B5D008C7B2B /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		18242DC01FDD3B5D008C7B2B /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		18242DC11FDD3B5D008C7B2B /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		18242DC21FDD3B5D008C7B2B /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		18242DC31FDD3B5D008C7B2B /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		18242DC41FDD3B5D008C7B2B /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		18242DC51FDD3B5D008C7B2B /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		18242DC61FDD3B5D008C7B2B /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		18242DC71FDD3B5D008C7B2B /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		18242DC81FDD3B5D008C7B2B /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		18242DC91FDD3B5D008C7B2B /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		18242DCA1FDD3B5D008C7B2B /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		18242DCB1FDD3B5D008C7B2B /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		18242DCC1FDD3B5D008C7B2B /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		18242DCD1FDD3B5D008C7B2B /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		18242DCE1FDD3B5D008C7B2B /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		18242DCF1FDD3B5D008C7B2B /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		18242DD01FDD3B5D008C7B2B /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		18242DD11FDD3B5D008C7B2B /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		18242DD21FDD3B5D008C7B2B /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		18242DD31FDD3B5D008C7B2B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18242DD41FDD3B5D008C7B2B /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
 		186301EC1FC2F1FA001BF7F6 /* StoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
 		186301ED1FC2F1FB001BF7F6 /* StoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTableViewCell.h; sourceTree = "<group>"; };
 		186301F01FC2F209001BF7F6 /* XHLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLevelView.h; sourceTree = "<group>"; };
@@ -1158,6 +1209,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18242DA71FDD39E2008C7B2B /* BRPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				18242DBE1FDD3B5D008C7B2B /* MJExtension */,
+				18242DA81FDD39E2008C7B2B /* StringPickerView */,
+				18242DAB1FDD39E2008C7B2B /* BRPickerView.h */,
+				18242DAC1FDD39E2008C7B2B /* DatePickerView */,
+				18242DAF1FDD39E2008C7B2B /* Base */,
+				18242DB21FDD39E2008C7B2B /* AddressPickerView */,
+			);
+			path = BRPickerView;
+			sourceTree = "<group>";
+		};
+		18242DA81FDD39E2008C7B2B /* StringPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				18242DA91FDD39E2008C7B2B /* BRStringPickerView.h */,
+				18242DAA1FDD39E2008C7B2B /* BRStringPickerView.m */,
+			);
+			path = StringPickerView;
+			sourceTree = "<group>";
+		};
+		18242DAC1FDD39E2008C7B2B /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				18242DAD1FDD39E2008C7B2B /* BRDatePickerView.h */,
+				18242DAE1FDD39E2008C7B2B /* BRDatePickerView.m */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		18242DAF1FDD39E2008C7B2B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				18242DB01FDD39E2008C7B2B /* BRBaseView.m */,
+				18242DB11FDD39E2008C7B2B /* BRBaseView.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		18242DB21FDD39E2008C7B2B /* AddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				18242DB31FDD39E2008C7B2B /* BRAddressModel.m */,
+				18242DB41FDD39E2008C7B2B /* BRAddressPickerView.h */,
+				18242DB51FDD39E2008C7B2B /* BRAddressModel.h */,
+				18242DB61FDD39E2008C7B2B /* BRCity.plist */,
+				18242DB71FDD39E2008C7B2B /* BRAddressPickerView.m */,
+			);
+			path = AddressPickerView;
+			sourceTree = "<group>";
+		};
+		18242DBE1FDD3B5D008C7B2B /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				18242DBF1FDD3B5D008C7B2B /* MJPropertyKey.h */,
+				18242DC01FDD3B5D008C7B2B /* NSObject+MJClass.h */,
+				18242DC11FDD3B5D008C7B2B /* NSString+MJExtension.h */,
+				18242DC21FDD3B5D008C7B2B /* MJPropertyType.m */,
+				18242DC31FDD3B5D008C7B2B /* NSObject+MJProperty.h */,
+				18242DC41FDD3B5D008C7B2B /* MJExtensionConst.h */,
+				18242DC51FDD3B5D008C7B2B /* NSObject+MJKeyValue.m */,
+				18242DC61FDD3B5D008C7B2B /* MJProperty.m */,
+				18242DC71FDD3B5D008C7B2B /* MJFoundation.h */,
+				18242DC81FDD3B5D008C7B2B /* NSObject+MJCoding.m */,
+				18242DC91FDD3B5D008C7B2B /* MJExtension.h */,
+				18242DCA1FDD3B5D008C7B2B /* MJExtensionConst.m */,
+				18242DCB1FDD3B5D008C7B2B /* NSObject+MJProperty.m */,
+				18242DCC1FDD3B5D008C7B2B /* MJPropertyType.h */,
+				18242DCD1FDD3B5D008C7B2B /* NSObject+MJClass.m */,
+				18242DCE1FDD3B5D008C7B2B /* NSString+MJExtension.m */,
+				18242DCF1FDD3B5D008C7B2B /* MJPropertyKey.m */,
+				18242DD01FDD3B5D008C7B2B /* MJProperty.h */,
+				18242DD11FDD3B5D008C7B2B /* NSObject+MJKeyValue.h */,
+				18242DD21FDD3B5D008C7B2B /* NSObject+MJCoding.h */,
+				18242DD31FDD3B5D008C7B2B /* Info.plist */,
+				18242DD41FDD3B5D008C7B2B /* MJFoundation.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
 		186301EF1FC2F209001BF7F6 /* LevelView(得分星星) */ = {
 			isa = PBXGroup;
 			children = (
@@ -2652,6 +2784,7 @@
 		47C7371F1D52E95B00F7407D /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				18242DA71FDD39E2008C7B2B /* BRPickerView */,
 				845322CA1FD8EF6700FAE07C /* CDTitleRolling */,
 				470D54EC1D92639C00D7A63E /* FMDB */,
 				472ED9791D65A33C00CE4204 /* AFNetworking */,
@@ -2958,6 +3091,7 @@
 				47C766CA1DD2C85C0037D9D3 /* WDjifenAddressCell.xib in Resources */,
 				473407591E2A21B000163695 /* WDJifenDetailViewController.xib in Resources */,
 				186301F71FC2F209001BF7F6 /* empty_star@2x.png in Resources */,
+				18242DBC1FDD39E2008C7B2B /* BRCity.plist in Resources */,
 				471DE7E51DE91B7000522DAF /* WDSpeakViewController.xib in Resources */,
 				47351BF01D6D790900C954A0 /* WDCollectCell.xib in Resources */,
 				4741D03B1D5B2639008B5F6D /* WDAddCommentViewController.xib in Resources */,
@@ -2980,6 +3114,7 @@
 				472ED9781D65A2F500CE4204 /* WDMineViewController.xib in Resources */,
 				47AC53281DBA2E54008D7FB3 /* WDServicePublishViewController.xib in Resources */,
 				47BFDBE61DB074D2007F986A /* WeiboSDK.bundle in Resources */,
+				18242DDE1FDD3B5D008C7B2B /* Info.plist in Resources */,
 				472F3D9A1D5462040032342E /* WDGoodChoiceCell.xib in Resources */,
 				474B9A321DE9255C00D12D2A /* WDRightCategoriesCell.xib in Resources */,
 				4743A0451D71962D00A1C8AD /* WDScanViewController.xib in Resources */,
@@ -3031,6 +3166,7 @@
 				472F3DD71D547BEC0032342E /* MJRefreshStateHeader.m in Sources */,
 				472F50FD1D5C271F00D34BCB /* SGPhotoBrowser.m in Sources */,
 				472F3DDA1D547BEC0032342E /* NSBundle+MJRefresh.m in Sources */,
+				18242DBD1FDD39E2008C7B2B /* BRAddressPickerView.m in Sources */,
 				475CA5381DF10F4700A632FC /* WDMyJudgementsViewController.m in Sources */,
 				845322CF1FD8EFC200FAE07C /* UIView+DCRolling.m in Sources */,
 				470D55251D927F4C00D7A63E /* WDGoodList.m in Sources */,
@@ -3043,6 +3179,7 @@
 				186301F61FC2F209001BF7F6 /* XHLevelView.m in Sources */,
 				471F7EB41D90079100BD9087 /* WDMyCollectModel.m in Sources */,
 				470D55231D927F4C00D7A63E /* DataBaseUtil.m in Sources */,
+				18242DBB1FDD39E2008C7B2B /* BRAddressModel.m in Sources */,
 				473407581E2A21B000163695 /* WDJifenDetailViewController.m in Sources */,
 				470D54F91D9263A700D7A63E /* FMDatabaseAdditions.m in Sources */,
 				473295791D7A63AC00206611 /* WDForgetPasswordViewController.m in Sources */,
@@ -3082,6 +3219,8 @@
 				472F3D991D5462040032342E /* WDGoodChoiceCell.m in Sources */,
 				4737A96C1D7FC14100F61A73 /* WDGetCouponController.m in Sources */,
 				47351C371D6DA4E100C954A0 /* WDMyCollectViewController.m in Sources */,
+				18242DDC1FDD3B5D008C7B2B /* NSString+MJExtension.m in Sources */,
+				18242DDF1FDD3B5D008C7B2B /* MJFoundation.m in Sources */,
 				472F50FA1D5C271F00D34BCB /* SGCollectionController.m in Sources */,
 				47D6D3AC1D705DCD00068F6E /* WDEditAdressViewController.m in Sources */,
 				472F3D911D542BEF0032342E /* WDNearStoreCell.m in Sources */,
@@ -3098,6 +3237,7 @@
 				4737A97C1D80FBAF00F61A73 /* SVProgressAnimatedView.m in Sources */,
 				4731F3A21E0BCE9D001F6003 /* WXPhotoScrollView.m in Sources */,
 				472B65091E14DCFD0056EFE8 /* WDApplyRefundViewController.m in Sources */,
+				18242DDB1FDD3B5D008C7B2B /* NSObject+MJClass.m in Sources */,
 				472F514C1D5C848700D34BCB /* PayTableViewCell.m in Sources */,
 				47C766C91DD2C85C0037D9D3 /* WDjifenAddressCell.m in Sources */,
 				472F3DCE1D547BEC0032342E /* MJRefreshHeader.m in Sources */,
@@ -3135,6 +3275,7 @@
 				47E598F01D98B8930076606C /* DataSigner.m in Sources */,
 				472ED9AA1D65A37600CE4204 /* UIWebView+AFNetworking.m in Sources */,
 				47E5991D1D9A76ED0076606C /* WDDetailsTableViewCell.m in Sources */,
+				18242DDA1FDD3B5D008C7B2B /* NSObject+MJProperty.m in Sources */,
 				47D4691F1D7D662500D64043 /* Single.m in Sources */,
 				47351BEF1D6D790900C954A0 /* WDCollectCell.m in Sources */,
 				47F569EE1D87981B00388072 /* WDSearchInfosModel.m in Sources */,
@@ -3144,11 +3285,13 @@
 				4741D0351D5B0FEE008B5F6D /* WDGoodsListsCell.m in Sources */,
 				47C737541D52E9E100F7407D /* WDLunBoView.m in Sources */,
 				4731F39F1E0BCE9D001F6003 /* WXPhoto.m in Sources */,
+				18242DB91FDD39E2008C7B2B /* BRDatePickerView.m in Sources */,
 				472F3DD91D547BEC0032342E /* MJRefreshConst.m in Sources */,
 				4737A97B1D80FBAF00F61A73 /* SVIndefiniteAnimatedView.m in Sources */,
 				4743A0391D71674600A1C8AD /* WDBianmingCell.m in Sources */,
 				47417B041D559BE500107087 /* WDWebViewController.m in Sources */,
 				47F569DB1D86ABCC00388072 /* WDGoodsMsgModel.m in Sources */,
+				18242DD81FDD3B5D008C7B2B /* NSObject+MJCoding.m in Sources */,
 				471F7EB11D8FD5E400BD9087 /* WDLoadAddressModel.m in Sources */,
 				47C737491D52E98200F7407D /* SDWebImageManager.m in Sources */,
 				472F3DDB1D547BEC0032342E /* UIScrollView+MJExtension.m in Sources */,
@@ -3160,8 +3303,10 @@
 				47FF4FAA1D9CFFDC00C46461 /* WDOrderListModel.m in Sources */,
 				472F3DCB1D547BEC0032342E /* MJRefreshBackFooter.m in Sources */,
 				472ED9611D65494300CE4204 /* WDPublishMsgViewController.m in Sources */,
+				18242DD71FDD3B5D008C7B2B /* MJProperty.m in Sources */,
 				472ED9881D65A35200CE4204 /* AFNetworkReachabilityManager.m in Sources */,
 				4737A9681D7FAD1B00F61A73 /* WDGetCouponCell.m in Sources */,
+				18242DBA1FDD39E2008C7B2B /* BRBaseView.m in Sources */,
 				4733CFFE1D5DD650005EE66D /* WDDetailsViewController.m in Sources */,
 				4793B2911E305E5800977120 /* WDWKViewController.m in Sources */,
 				47A5FCF61DB1E14200BBF992 /* WDBusinessOrderCell.m in Sources */,
@@ -3188,6 +3333,7 @@
 				47F569D51D86973100388072 /* WDSpeakCategoriesManager.m in Sources */,
 				472F97281D582C2100E37F52 /* WDSearchViewController.m in Sources */,
 				4744A8E41D61C66B00C5979A /* WDNewsViewController.m in Sources */,
+				18242DD51FDD3B5D008C7B2B /* MJPropertyType.m in Sources */,
 				475CA53D1DF1110400A632FC /* WDMyJudgementsCell.m in Sources */,
 				472F3DD01D547BEC0032342E /* MJRefreshAutoNormalFooter.m in Sources */,
 				4732B9E01D631F47005F1988 /* CCLocationManager.m in Sources */,
@@ -3200,6 +3346,7 @@
 				47C66D421DE6C8F5006ED609 /* WDScrollView.m in Sources */,
 				472F3DCC1D547BEC0032342E /* MJRefreshComponent.m in Sources */,
 				3DA1FE071F1646D20056D631 /* WDBMViewController.m in Sources */,
+				18242DDD1FDD3B5D008C7B2B /* MJPropertyKey.m in Sources */,
 				47FF4FA61D9CBE9600C46461 /* DetailTableViewCell.m in Sources */,
 				472F50FE1D5C271F00D34BCB /* SGTip.m in Sources */,
 				47D130BD1DAE28FB00A78FD4 /* WDJifenMsgViewController.m in Sources */,
@@ -3207,10 +3354,12 @@
 				47351C291D6D9B1C00C954A0 /* WDAddressTableVController.m in Sources */,
 				47AC53191DB9ABAD008D7FB3 /* WDNearLocationModel.m in Sources */,
 				474B9A311DE9255C00D12D2A /* WDRightCategoriesCell.m in Sources */,
+				18242DD61FDD3B5D008C7B2B /* NSObject+MJKeyValue.m in Sources */,
 				471D163F1DC08613004E8C65 /* WDMoreTejiaViewController.m in Sources */,
 				472F515D1D5C84DF00D34BCB /* WDShoppingCarCell.m in Sources */,
 				4733CFC71D5D75A8005EE66D /* WDConvenienceServicesCell.m in Sources */,
 				47FF4FB01D9D0EA800C46461 /* WDOrderMsgModel.m in Sources */,
+				18242DB81FDD39E2008C7B2B /* BRStringPickerView.m in Sources */,
 				47C7374F1D52E98200F7407D /* UIImageView+HighlightedWebCache.m in Sources */,
 				472ED98A1D65A35200CE4204 /* AFURLRequestSerialization.m in Sources */,
 				472F3DCF1D547BEC0032342E /* MJRefreshAutoGifFooter.m in Sources */,
@@ -3272,6 +3421,7 @@
 				47C66D3A1DE53626006ED609 /* WDShoppingCarViewController.m in Sources */,
 				470D55381D9520B200D7A63E /* WDGoodsInfoViewController.m in Sources */,
 				3DC5F0FA1F11CC48002E0B25 /* WDFruitVegetableBtn.m in Sources */,
+				18242DD91FDD3B5D008C7B2B /* MJExtensionConst.m in Sources */,
 				472EF8C21D2D0F5700FF7996 /* UIView+LBExtension.m in Sources */,
 				472F51341D5C840400D34BCB /* WDMinShopCarTableViewCell.m in Sources */,
 				472EF88A1D2CB58A00FF7996 /* main.m in Sources */,
@@ -3389,7 +3539,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WuDou/WuDou.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EF7255G3YL;
 				ENABLE_BITCODE = NO;
@@ -3424,8 +3574,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wudou.zxx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "78b68ed8-0095-46ac-be61-ed5c883d3b39";
-				PROVISIONING_PROFILE_SPECIFIER = dev;
+				PROVISIONING_PROFILE = "074e0e70-ae6d-4e93-9515-e712cc8af5c0";
+				PROVISIONING_PROFILE_SPECIFIER = ttsx;
 			};
 			name = Debug;
 		};
@@ -3471,8 +3621,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wudou.zxx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7b9c5eb6-30f7-46b5-ac5f-4febf3957c52";
-				PROVISIONING_PROFILE_SPECIFIER = dis;
+				PROVISIONING_PROFILE = "074e0e70-ae6d-4e93-9515-e712cc8af5c0";
+				PROVISIONING_PROFILE_SPECIFIER = ttsx;
 			};
 			name = Release;
 		};
