@@ -141,9 +141,11 @@ static NSString *string = @"WDExtentionCell";
 //    }
     if (indexPath.item == 4) {
         
-        WDBMViewController *convenienceServicesVC = [[WDBMViewController alloc]init];
-        [_superVC.navigationController pushViewController:convenienceServicesVC animated:YES];
+//        WDBMViewController *convenienceServicesVC = [[WDBMViewController alloc]init];
+//        [_superVC.navigationController pushViewController:convenienceServicesVC animated:YES];
 
+        WDJifenStoreViewController *scoreShopVC = [[WDJifenStoreViewController alloc]init];
+        [_superVC.navigationController pushViewController:scoreShopVC animated:YES];
     }
 }
 

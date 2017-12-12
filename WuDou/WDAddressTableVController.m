@@ -102,7 +102,8 @@ static NSString *reuseID = @"WDShoppingAdressCell";
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 15, 20);
-    [btn setBackgroundImage:[UIImage imageNamed:@"fanhui.png"] forState:UIControlStateNormal];
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(4, 3, 4,3)];
+    [btn setImage:[UIImage imageNamed:@"fanhui.png"] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(goBackAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem*back = [[UIBarButtonItem alloc]initWithCustomView:btn];
     

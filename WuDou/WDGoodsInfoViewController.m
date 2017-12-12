@@ -195,13 +195,15 @@ static NSString *cellId = @"WDUserJudgeCell";
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 15, 20);
-    [btn setBackgroundImage:[UIImage imageNamed:@"fanhui.png"] forState:UIControlStateNormal];
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(4, 3, 4,3)];
+    [btn setImage:[UIImage imageNamed:@"fanhui.png"] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(goBackAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem*back = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.leftBarButtonItem = back;
     
     //  右侧聊天信息按钮
     rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 28)];
+    [rightBtn setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     [rightBtn setImage:[UIImage imageNamed:@"消息图标-1"] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(chartAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];

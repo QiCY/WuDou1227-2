@@ -93,12 +93,8 @@
 	<string>访问媒体资源库</string>
 	<key>NSCameraUsageDescription</key>
 	<string>访问相机</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>使用您的位置来获取附近店铺信息</string>
 	<key>NSLocationUsageDescription</key>
 	<string>使用您的位置来获取附近店铺信息</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>访问相册</string>
 	<key>UIRequiredDeviceCapabilities</key>

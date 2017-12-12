@@ -45,6 +45,10 @@
     self.storeName.font = [UIFont systemFontOfSize:16];
     [self.contentView addSubview:self.storeName];
     
+    self.disTimeImg = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth - 80, 5, 64, 20)];
+    self.disTimeImg.image = [UIImage imageNamed:@"两小时必达.png"];
+    [self.contentView addSubview:self.disTimeImg];
+    
     self.scoreImg = [[XHLevelView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.storeImgView.frame)+10, 40, 60, 20)];
     [self.contentView addSubview:self.scoreImg];
     
