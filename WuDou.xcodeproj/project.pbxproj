@@ -3539,7 +3539,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WuDou/WuDou.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EF7255G3YL;
 				ENABLE_BITCODE = NO;
@@ -3574,8 +3574,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wudou.zxx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "074e0e70-ae6d-4e93-9515-e712cc8af5c0";
-				PROVISIONING_PROFILE_SPECIFIER = ttsx;
+				PROVISIONING_PROFILE = "d365e859-b68c-4908-bfaa-8ab2df11597c";
+				PROVISIONING_PROFILE_SPECIFIER = wudouDevelop;
 			};
 			name = Debug;
 		};

@@ -32,7 +32,7 @@
 -(void)createHeadView{
     UIView *imgbg = [[UIView alloc] initWithFrame:CGRectMake(8, 8, 84, 64)];
     [self.contentView addSubview:imgbg];
-    imgbg.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    imgbg.layer.borderColor = [UIColor colorWithRed:244/255.0 green:245/255.0 blue:240/255.0 alpha:1].CGColor;
     imgbg.layer.borderWidth = 0.5;
     imgbg.layer.cornerRadius = 5;
     [imgbg.layer setMasksToBounds:YES];

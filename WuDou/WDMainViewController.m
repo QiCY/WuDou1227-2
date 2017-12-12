@@ -533,10 +533,10 @@ static NSString *recommend = @"recommend";
 -(void)refreshContentView{
     _tejiaView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_publicNewsView.frame), kScreenWidth, 195)];
     
-    _bottomView.frame = CGRectMake(0, CGRectGetMaxY(_lunboView3.frame), kScreenWidth,   [self getGoodsChoiceViewHeight:self.recommendGoodsList]);
+    _bottomView.frame = CGRectMake(0, CGRectGetMaxY(_lunboView3.frame), kScreenWidth,   [self getGoodsChoiceViewHeight:self.recommendGoodsList]+5);
     _goodChoiceCV.frame = CGRectMake(0, 0, kScreenWidth, [self getGoodsChoiceViewHeight:self.recommendGoodsList]);
     NSLog(@"_goodVc height is %f",_goodChoiceCV.frame.size.height);
-    _recommendView.frame = CGRectMake(0, CGRectGetMaxY(_bottomView.frame), kScreenWidth, itemHeight+50);
+    _recommendView.frame = CGRectMake(0, CGRectGetMaxY(_bottomView.frame), kScreenWidth, itemHeight+40);
     _nearStoreHeadImg.frame = CGRectMake(0, CGRectGetMaxY(_recommendView.frame), kScreenWidth, 140);
     _nearStoreTableView.frame = CGRectMake(0, CGRectGetMaxY(_nearStoreHeadImg.frame), kScreenWidth, self.nearStoreArr.count * 80+40);
     [self getMenuTypeList];
@@ -581,26 +581,27 @@ static NSString *recommend = @"recommend";
     _mainScrollView.contentSize = CGSizeMake(0, CGRectGetMaxY(_nearStoreTableView.frame));
 }
 -(void)setNearByShopMenu:(NSMutableArray *)typelist{
+    CGFloat width = kScreenWidth/5;
     for (int i = 0; i<typelist.count; i++) {
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(i*100, 0, 100, 40)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(i*width, 0, width, 40)];
         button.tag = i;
         if (i==0) {
             button.selected = YES;
             _selectBtn = button;
         }
         [_nearByMenuScroll addSubview:button];
-        _nearByMenuScroll.contentSize = CGSizeMake(typelist.count*100>kScreenWidth?typelist.count*100:kScreenWidth, 40);
+        _nearByMenuScroll.contentSize = CGSizeMake(typelist.count*width>kScreenWidth?typelist.count*100:kScreenWidth, 40);
         [button setTitle:typelist[i][@"name"] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setTitleColor:KSYSTEM_COLOR forState:UIControlStateSelected];
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         
-        CGFloat width = [self sizeWithText:_selectBtn.titleLabel.text font:_selectBtn.titleLabel.font];
-        self.footLine.frame = CGRectMake((100- width)/2, 35, width, 2);
+        CGFloat textwidth = [self sizeWithText:_selectBtn.titleLabel.text font:_selectBtn.titleLabel.font];
+        self.footLine.frame = CGRectMake((width- textwidth)/2, 33, textwidth, 2);
         [_selectBtn addSubview:self.footLine];
         [button addTarget:self action:@selector(nearByBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
-    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 39.5, _menuList.count*100, 0.5)];
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 39.5, _menuList.count*width, 0.5)];
     line.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1];
     [_nearByMenuScroll addSubview:line];
 }
@@ -611,8 +612,9 @@ static NSString *recommend = @"recommend";
     _selectBtn.selected = !_selectBtn.selected;
     NSString *type = _menuList[sender.tag][@"id"];
     [self getStoreMenu:type];
-    CGFloat width = [self sizeWithText:_selectBtn.titleLabel.text font:_selectBtn.titleLabel.font];
-    self.footLine.frame = CGRectMake((100- width)/2, 35, width, 2);
+    CGFloat textwidth = [self sizeWithText:_selectBtn.titleLabel.text font:_selectBtn.titleLabel.font];
+    CGFloat width = kScreenWidth/5;
+    self.footLine.frame = CGRectMake((width- textwidth)/2, 33, textwidth, 2);
     [_selectBtn addSubview:self.footLine];
 }
 /** 搭建UI界面*/
@@ -1064,7 +1066,8 @@ static NSString *recommend = @"recommend";
 - (void)_horizontalLineWithMaxY:(CGFloat)maxY superV:(UIView *)superV{
     
     UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, maxY, kScreenWidth, 1)];
-    line.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1];
+//    line.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1];
+    line.backgroundColor = [UIColor colorWithRed:245/255.0 green:244/255.0 blue:250/255.0 alpha:1];
     [superV addSubview:line];
 }
 
@@ -1159,16 +1162,14 @@ static NSString *recommend = @"recommend";
     _nearStoreHeadImg = nearStoreHeadImg;
     
     
-    //  分隔线
-//    separationView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(whiteView1.frame), kScreenWidth, 0)];
-//    separationView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1];
-//    [_mainScrollView addSubview:separationView];
+    
     
     //  附近店铺 单元格
     _nearStoreTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_nearStoreHeadImg.frame), kScreenWidth, 10*90) style:UITableViewStylePlain];
     _nearStoreTableView.delegate = self;
     _nearStoreTableView.dataSource = self;
     [_nearStoreTableView setSectionHeaderHeight:40];
+    _nearStoreTableView.separatorInset = UIEdgeInsetsZero;
     _nearStoreTableView.scrollEnabled = NO;  //禁止滑动
     _nearStoreTableView.showsVerticalScrollIndicator = NO;
     _nearStoreTableView.showsHorizontalScrollIndicator = NO;
@@ -1457,8 +1458,11 @@ static NSString *recommend = @"recommend";
         [cell.shopImageView sd_setImageWithURL:[NSURL URLWithString:model.img]];
         cell.shopsPrice.text = [NSString stringWithFormat:@"￥%@",model.shopprice];
         
-        NSDictionary *attribtDic = @{NSStrikethroughStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle]};
+        NSDictionary *attribtDic = @{NSStrikethroughStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle],NSBaselineOffsetAttributeName : @(NSUnderlineStyleSingle)};
         NSMutableAttributedString *attribtStr = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"￥%@",model.marketprice] attributes:attribtDic];
+        
+        
+        
         
         // 赋值
         cell.marketPrice.attributedText = attribtStr;

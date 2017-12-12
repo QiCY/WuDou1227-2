@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WuDou/WDGoodsInfoViewController.m"
-            timestampString = "534438546.659726"
+            timestampString = "534694886.266247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "760"
-            endingLineNumber = "760"
+            startingLineNumber = "773"
+            endingLineNumber = "773"
             landmarkName = "WDGoodsInfoViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WuDou/WDGoodsInfoViewController.m"
-            timestampString = "534438546.66005"
+            timestampString = "534694886.266423"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "737"
-            endingLineNumber = "737"
+            startingLineNumber = "750"
+            endingLineNumber = "750"
             landmarkName = "-_createWebView"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WuDou/WDMainViewController.m"
-            timestampString = "534269430.713248"
+            timestampString = "534694886.266516"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "276"
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WuDou/WDGoodsInfoViewController.m"
-            timestampString = "534438546.660178"
+            timestampString = "534694886.266583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "843"
-            endingLineNumber = "843"
+            startingLineNumber = "856"
+            endingLineNumber = "856"
             landmarkName = "-_createBottomView"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,44 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WuDou/WDGoodsInfoViewController.m"
-            timestampString = "534438546.660265"
+            timestampString = "534694886.266643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "478"
-            endingLineNumber = "478"
+            startingLineNumber = "475"
+            endingLineNumber = "475"
             landmarkName = "-subtractBtnAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WuDou/WDGoodsInfoViewController.m"
-            timestampString = "534438546.660349"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "523"
-            endingLineNumber = "523"
-            landmarkName = "-subtractBtnAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WuDou/WDGoodList.m"
-            timestampString = "534438546.660438"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "+getGoodWithGoodID:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -249,13 +217,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WuDou/WDAccountViewController.m"
-            timestampString = "534596662.177389"
+            filePath = "WuDou/WDTabbarViewController.m"
+            timestampString = "534694886.266863"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "474"
-            endingLineNumber = "474"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-tabBarPlusBtnClick:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -265,8 +233,72 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "WuDou/WDAppInitManeger.m"
+            timestampString = "534694886.266953"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "+requestAppInitWithType:verson:model:iMei:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WuDou/AppDelegate.m"
+            timestampString = "534694575.686466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate application:didFinishLaunchingWithOptions:]"
+                  moduleName = "WuDou"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WuDou1227-2/WuDou/AppDelegate.m"
+                  timestampString = "534694886.84607"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "776">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke"
+                  moduleName = "WuDou"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WuDou1227-2/WuDou/AppDelegate.m"
+                  timestampString = "534694886.848905"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "WuDou/WDAccountViewController.m"
-            timestampString = "534596662.177458"
+            timestampString = "534695213.897144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "531"
@@ -282,12 +314,12 @@
                   moduleName = "WuDou"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WuDou1227-2/WuDou/WDAccountViewController.m"
-                  timestampString = "534595894.139048"
+                  timestampString = "534695217.453326"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "531"
                   endingLineNumber = "531"
-                  offsetFromSymbolStart = "261">
+                  offsetFromSymbolStart = "252">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -297,12 +329,12 @@
                   moduleName = "WuDou"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WuDou1227-2/WuDou/WDAccountViewController.m"
-                  timestampString = "534595894.141875"
+                  timestampString = "534695217.457247"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "533"
                   endingLineNumber = "533"
-                  offsetFromSymbolStart = "109">
+                  offsetFromSymbolStart = "112">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -209,7 +209,7 @@
     
     __block NSString *left = [[NSUserDefaults standardUserDefaults] objectForKey:kLEFTCATEGORYKEY];
     
-    [WDNearStoreManager requestNearStoreWithStoreclasses:left storeorder:@"" storesate:@"" currentPage:@"" completion:^(NSMutableArray *array, NSString *error) {
+    [WDNearStoreManager requestNearStoreWithStoreclasses:left storeorder:@"" storesate:@"" currentPage:[NSString stringWithFormat:@"%d",_page] completion:^(NSMutableArray *array, NSString *error) {
        
         if (error) {
             

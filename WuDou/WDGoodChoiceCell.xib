@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -56,9 +56,9 @@
                         </variation>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="购物车-new" translatesAutoresizingMaskIntoConstraints="NO" id="S3P-Po-KWT">
-                        <rect key="frame" x="87" y="146" width="30" height="30"/>
+                        <rect key="frame" x="87" y="146" width="30" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="PXb-zx-SCD"/>
+                            <constraint firstAttribute="height" constant="25" id="PXb-zx-SCD"/>
                             <constraint firstAttribute="width" constant="20" id="aib-fS-NXq"/>
                         </constraints>
                         <variation key="default">
@@ -78,7 +78,7 @@
                 <constraint firstItem="OkN-QZ-Ria" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="YyD-c4-xsa"/>
                 <constraint firstItem="S3P-Po-KWT" firstAttribute="leading" secondItem="pvB-8N-puU" secondAttribute="trailing" id="e3m-hV-SVb"/>
                 <constraint firstItem="3Km-CT-FHq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="17" id="gAQ-aa-XKG"/>
-                <constraint firstAttribute="bottom" secondItem="S3P-Po-KWT" secondAttribute="bottom" constant="5" id="ihE-BC-Z4n"/>
+                <constraint firstAttribute="bottom" secondItem="S3P-Po-KWT" secondAttribute="bottom" constant="10" id="ihE-BC-Z4n"/>
                 <constraint firstItem="S3P-Po-KWT" firstAttribute="leading" secondItem="pvB-8N-puU" secondAttribute="trailing" id="jCf-s4-9q3"/>
                 <constraint firstItem="pvB-8N-puU" firstAttribute="top" secondItem="OkN-QZ-Ria" secondAttribute="bottom" constant="5" id="kCu-ok-zll"/>
                 <constraint firstItem="3Km-CT-FHq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="p6k-nG-qRn"/>

@@ -391,13 +391,10 @@ static NSString *cellId = @"WDUserJudgeCell";
 /* 创建顶部轮播视图 **/
 - (WDLunBoView *)_createTopLunboView{
     
-//    NSArray *arr = @[@"http://pic12.nipic.com/20101224/3524951_092703004365_2.jpg",@"http://img.taopic.com/uploads/allimg/120216/9124-12021615420996.jpg",@"http://img.taopic.com/uploads/allimg/120323/2257-120323220Q79.jpg",@"http://e.hiphotos.baidu.com/bainuo/wh=720,436/sign=23a09e8b364e251fe2a2ecff95b6e523/5882b2b7d0a20cf45339c26e70094b36adaf99d1.jpg"];
-//    _lunboImages = [NSMutableArray arrayWithArray:arr];
     
     if (!_lunboView) {
-        CGFloat lunboH = kScreenWidth / 2;
+        CGFloat lunboH =kScreenHeight -268 -64 - 50 ;
         _lunboView = [WDLunBoView lunBoViewWithFrame:CGRectMake(0, 0, kScreenWidth, lunboH) delegate:self placeholderImage:[UIImage imageNamed:@"noproduct.png"]];
-        //    _lunboView.imageURLStringsGroup = _lunboImages;
         _lunboView.autoScrollTimeInterval = 2.0f;
         _lunboView.showPageControl = YES;
         _lunboView.pageControlBottomOffset = -12;
@@ -480,6 +477,22 @@ static NSString *cellId = @"WDUserJudgeCell";
     if (count > 0)
     {
         count --;
+        if (count == 0) {
+            [middleView sendSubviewToBack:priceView];
+            [middleView bringSubviewToFront:noPriceView];
+            _goodsCount.text = [NSString stringWithFormat:@"0"];
+            countLabel.text = @"0";
+            
+            qisongBtn.enabled = NO;
+            qisongBtn.backgroundColor = [UIColor lightGrayColor];
+            [qisongBtn setTitle:@"去结算" forState:UIControlStateNormal];
+            
+            gotoCarBtn.enabled = NO;
+            gotoCarBtn.backgroundColor = [UIColor lightGrayColor];
+            
+            [WDGoodList deleteGoodWithGoodsId:[self.goodsInfosModel.pid intValue]];  // 当减到0时删除该商品id下的记录
+            return;
+        }
         WDChooseGood * good = [[WDChooseGood alloc]init];
         good.goodName = self.goodsInfosModel.name;
         good.goodPrice = self.goodsInfosModel.shopprice;
@@ -511,11 +524,11 @@ static NSString *cellId = @"WDUserJudgeCell";
         else
         {
             qisongBtn.enabled = YES;
-            qisongBtn.backgroundColor = [UIColor lightGrayColor];
+            gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
             [qisongBtn setTitle:[NSString stringWithFormat:@"结算"] forState:UIControlStateNormal];
             
             gotoCarBtn.enabled = YES;
-            gotoCarBtn.backgroundColor = [UIColor lightGrayColor];
+            gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
         }
     }
     else
@@ -1070,7 +1083,9 @@ static NSString *cellId = @"WDUserJudgeCell";
     }
     if (tableView == self.tableView) {
         if (indexPath.section == 0) {
-            return kScreenWidth/2;
+            CGFloat lunboH =kScreenHeight -268 -64 - 50;
+            return lunboH;
+            return kScreenWidth/2+200;
         }
         if (indexPath.section == 1) {
             return 80;

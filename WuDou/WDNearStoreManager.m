@@ -16,11 +16,11 @@
     
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"APP_ACCESS_TOKEN"];
     NSString *urlStr = [NSString stringWithFormat:@"%@api/stores/Load?access_token=%@&storeclasses=%@&storeorder=%@&storesate=%@&currentpage=%@",API_PORT,token,category,order,state,page];
-    
+    NSLog(@"request near store url is %@",urlStr);
     [manager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        NSLog(@"request near store data is %@",responseObject);
         NSMutableArray *allDataArray;
         
         NSString *ret = responseObject[@"ret"];
