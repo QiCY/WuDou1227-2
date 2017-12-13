@@ -10,6 +10,7 @@
 #import "WDDetailsTableViewCell.h"
 #import "WDNearDetailsViewController.h"
 #import "WDGoodsInfoViewController.h"
+#import "WDStoreDetailViewController.h"
 
 @interface WDDetailsViewController ()<UITableViewDelegate,UITableViewDataSource,WDDetailsTableViewCellDelegate,UISearchBarDelegate>
 {
@@ -219,11 +220,15 @@ static NSString *const strID = @"cell";
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WDNearDetailsViewController * detailsVC = [[WDNearDetailsViewController alloc]init];
+//    WDNearDetailsViewController * detailsVC = [[WDNearDetailsViewController alloc]init];
+    WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+    nearVC.type = 1;
+    
     WDSearchResultModel * shop = _storeMsgArray[indexPath.row];
     NSString * shopID = shop.storeid;
+    nearVC.storeId = shop.storeid;
     [WDAppInitManeger saveStrData:shopID withStr:@"shopID"];
-    [self.navigationController pushViewController:detailsVC animated:YES];
+    [self.navigationController pushViewController:nearVC animated:YES];
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

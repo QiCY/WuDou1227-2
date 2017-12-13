@@ -10,6 +10,7 @@
 #import "WDGoodChoiceCell.h"
 #import "WDGoodsInfoViewController.h"
 #import "WDNearDetailsViewController.h"
+#import "WDStoreDetailViewController.h"
 
 static NSString *string = @"WDGoodChoiceCell";
 
@@ -88,7 +89,9 @@ static NSString *string = @"WDGoodChoiceCell";
     return nil;
 }
 - (void)headerViewClicked:(UIButton *)sender{
-    WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+//    WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+    WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+    nearVC.type = 1;
      WDAdvertisementModel *adModel = self.adList[sender.tag];
     NSString *storeId = adModel.url;
     nearVC.storeId = storeId;

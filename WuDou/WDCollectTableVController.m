@@ -11,6 +11,7 @@
 #import "WDNearDetailsViewController.h"
 #import "WDLoginViewController.h"
 #import "WDGoodsInfoViewController.h"
+#import "WDStoreDetailViewController.h"
 
 @interface WDCollectTableVController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -151,10 +152,12 @@ static NSString *reuseId = @"WDCollectCell";
     NSString *type = model.urlType;
     if ([type isEqualToString:@"1"]) { //店铺
         
-        WDNearDetailsViewController *nearDetailsVC = [[WDNearDetailsViewController alloc]init];
-        nearDetailsVC.storeId = model.url;
-        [WDAppInitManeger saveStrData:nearDetailsVC.storeId withStr:@"shopID"];
-        [self.navigationController pushViewController:nearDetailsVC animated:YES];
+//        WDNearDetailsViewController *nearDetailsVC = [[WDNearDetailsViewController alloc]init];
+        WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+        nearVC.type = 1;
+        nearVC.storeId = model.url;
+        [WDAppInitManeger saveStrData:nearVC.storeId withStr:@"shopID"];
+        [self.navigationController pushViewController:nearVC animated:YES];
         
     }else{  //商品
         

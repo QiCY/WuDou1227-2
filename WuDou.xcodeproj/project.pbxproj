@@ -395,6 +395,10 @@
 		47FF4FAA1D9CFFDC00C46461 /* WDOrderListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FF4FA91D9CFFDC00C46461 /* WDOrderListModel.m */; };
 		47FF4FAD1D9D01FA00C46461 /* WDProductsDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FF4FAC1D9D01FA00C46461 /* WDProductsDataModel.m */; };
 		47FF4FB01D9D0EA800C46461 /* WDOrderMsgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FF4FAF1D9D0EA800C46461 /* WDOrderMsgModel.m */; };
+		8450ED4C1FE1311000CA531F /* SYHeadScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450ED451FE1310E00CA531F /* SYHeadScrollView.m */; };
+		8450ED4D1FE1311000CA531F /* WDStoreInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450ED471FE1310F00CA531F /* WDStoreInfoView.m */; };
+		8450ED4E1FE1311000CA531F /* WDStoreInfoGoodsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450ED491FE1310F00CA531F /* WDStoreInfoGoodsView.m */; };
+		8450ED4F1FE1311000CA531F /* WDStoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450ED4B1FE1311000CA531F /* WDStoreDetailViewController.m */; };
 		845322CF1FD8EFC200FAE07C /* UIView+DCRolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 845322CB1FD8EFBD00FAE07C /* UIView+DCRolling.m */; };
 		845322D01FD8EFC200FAE07C /* DCTitleRolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 845322CC1FD8EFBE00FAE07C /* DCTitleRolling.m */; };
 		845322D31FDA31EE00FAE07C /* WDShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845322D21FDA31EE00FAE07C /* WDShopCell.m */; };
@@ -1154,6 +1158,14 @@
 		47FF4FAC1D9D01FA00C46461 /* WDProductsDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDProductsDataModel.m; sourceTree = "<group>"; };
 		47FF4FAE1D9D0EA800C46461 /* WDOrderMsgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDOrderMsgModel.h; sourceTree = "<group>"; };
 		47FF4FAF1D9D0EA800C46461 /* WDOrderMsgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDOrderMsgModel.m; sourceTree = "<group>"; };
+		8450ED441FE1310E00CA531F /* SYHeadScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYHeadScrollView.h; sourceTree = "<group>"; };
+		8450ED451FE1310E00CA531F /* SYHeadScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYHeadScrollView.m; sourceTree = "<group>"; };
+		8450ED461FE1310E00CA531F /* WDStoreInfoGoodsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDStoreInfoGoodsView.h; sourceTree = "<group>"; };
+		8450ED471FE1310F00CA531F /* WDStoreInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDStoreInfoView.m; sourceTree = "<group>"; };
+		8450ED481FE1310F00CA531F /* WDStoreInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDStoreInfoView.h; sourceTree = "<group>"; };
+		8450ED491FE1310F00CA531F /* WDStoreInfoGoodsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDStoreInfoGoodsView.m; sourceTree = "<group>"; };
+		8450ED4A1FE1310F00CA531F /* WDStoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDStoreDetailViewController.h; sourceTree = "<group>"; };
+		8450ED4B1FE1311000CA531F /* WDStoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDStoreDetailViewController.m; sourceTree = "<group>"; };
 		845322CB1FD8EFBD00FAE07C /* UIView+DCRolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCRolling.m"; sourceTree = "<group>"; };
 		845322CC1FD8EFBE00FAE07C /* DCTitleRolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTitleRolling.m; sourceTree = "<group>"; };
 		845322CD1FD8EFC100FAE07C /* DCTitleRolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTitleRolling.h; sourceTree = "<group>"; };
@@ -1637,6 +1649,14 @@
 		472EF8C51D2D0FE900FF7996 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8450ED441FE1310E00CA531F /* SYHeadScrollView.h */,
+				8450ED451FE1310E00CA531F /* SYHeadScrollView.m */,
+				8450ED4A1FE1310F00CA531F /* WDStoreDetailViewController.h */,
+				8450ED4B1FE1311000CA531F /* WDStoreDetailViewController.m */,
+				8450ED461FE1310E00CA531F /* WDStoreInfoGoodsView.h */,
+				8450ED491FE1310F00CA531F /* WDStoreInfoGoodsView.m */,
+				8450ED481FE1310F00CA531F /* WDStoreInfoView.h */,
+				8450ED471FE1310F00CA531F /* WDStoreInfoView.m */,
 				470D55391D9520CA00D7A63E /* WDMainViewController.h */,
 				47BF4C751DAA41090044D52F /* WDMainViewController.m */,
 				470D553B1D9520CA00D7A63E /* WDMainViewController.xib */,
@@ -3201,9 +3221,11 @@
 				472F3DD31D547BEC0032342E /* MJRefreshBackNormalFooter.m in Sources */,
 				47F569E41D878CC100388072 /* WDStoreMsgModel.m in Sources */,
 				470D54FA1D9263A700D7A63E /* FMDatabasePool.m in Sources */,
+				8450ED4E1FE1311000CA531F /* WDStoreInfoGoodsView.m in Sources */,
 				4733CFCC1D5D9FB1005EE66D /* WDServiceDetailViewController.m in Sources */,
 				4731F3A11E0BCE9D001F6003 /* WXPhotoCell.m in Sources */,
 				47C7374E1D52E98200F7407D /* UIImage+WebP.m in Sources */,
+				8450ED4C1FE1311000CA531F /* SYHeadScrollView.m in Sources */,
 				47C737651D5337E100F7407D /* WDExtentionCollectionView.m in Sources */,
 				47C7375B1D52FD7200F7407D /* WDLunBoCell.m in Sources */,
 				47A5FCF11DB1E0FC00BBF992 /* WDBusinessOrderViewController.m in Sources */,
@@ -3289,6 +3311,7 @@
 				472F3DD91D547BEC0032342E /* MJRefreshConst.m in Sources */,
 				4737A97B1D80FBAF00F61A73 /* SVIndefiniteAnimatedView.m in Sources */,
 				4743A0391D71674600A1C8AD /* WDBianmingCell.m in Sources */,
+				8450ED4D1FE1311000CA531F /* WDStoreInfoView.m in Sources */,
 				47417B041D559BE500107087 /* WDWebViewController.m in Sources */,
 				47F569DB1D86ABCC00388072 /* WDGoodsMsgModel.m in Sources */,
 				18242DD81FDD3B5D008C7B2B /* NSObject+MJCoding.m in Sources */,
@@ -3298,6 +3321,7 @@
 				471505171D48D74F0098DAA4 /* WDCommenBtn.m in Sources */,
 				477BE4D91D863A22006EE9E6 /* WDNearStoreManager.m in Sources */,
 				473B5E471D54A48D00E86F1F /* WDMainCell.m in Sources */,
+				8450ED4F1FE1311000CA531F /* WDStoreDetailViewController.m in Sources */,
 				47C094161DF2BD0500DBCDA4 /* WDAddJudgementsCell.m in Sources */,
 				471F7EAE1D8FD4E000BD9087 /* WDMineManager.m in Sources */,
 				47FF4FAA1D9CFFDC00C46461 /* WDOrderListModel.m in Sources */,

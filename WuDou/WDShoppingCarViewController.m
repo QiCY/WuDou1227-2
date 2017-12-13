@@ -15,7 +15,7 @@
 #import "WDAppInitManeger.h"
 #import "WDLoginViewController.h"
 #import "WDShopCell.h"
-
+#import "WDStoreDetailViewController.h"
 @interface WDShoppingCarViewController ()<UITableViewDelegate,UITableViewDataSource,WDShopCellDelegate>
 {
     NSMutableArray * arr1;
@@ -277,13 +277,14 @@
 {
     
     WDCarShop *shop = _shopArr[indexPath.row];
-    WDNearDetailsViewController * detailsVC = [[WDNearDetailsViewController alloc]init];
-        
+//    WDNearDetailsViewController * detailsVC = [[WDNearDetailsViewController alloc]init];
+    WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+    nearVC.type = 1;
         WDCarShop * carShop = shop;
-        detailsVC.storeId = carShop.shopID;
+        nearVC.storeId = carShop.shopID;
         [WDAppInitManeger saveStrData:carShop.shopID withStr:@"shopID"];
 
-    [self.navigationController pushViewController:detailsVC animated:YES];
+    [self.navigationController pushViewController:nearVC animated:YES];
     
 //    WDGoodsInfoViewController *goodsInfoVC = [[WDGoodsInfoViewController alloc]init];
 //    WDCarShop *shop = _shopArr[indexPath.section];
@@ -409,15 +410,17 @@
 //跳转到商店详情
 -(void)goShop:(UIButton *)btn
 {
-    WDNearDetailsViewController * detailsVC = [[WDNearDetailsViewController alloc]init];
+//    WDNearDetailsViewController * detailsVC = [[WDNearDetailsViewController alloc]init];
+    WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+    nearVC.type = 1;
     if (_shopArr.count > 0) {
         
         WDCarShop * carShop = _shopArr[btn.tag];
-        detailsVC.storeId = carShop.shopID;
+        nearVC.storeId = carShop.shopID;
         [WDAppInitManeger saveStrData:carShop.shopID withStr:@"shopID"];
     }
     
-    [self.navigationController pushViewController:detailsVC animated:YES];
+    [self.navigationController pushViewController:nearVC animated:YES];
 }
 
 

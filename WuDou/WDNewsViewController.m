@@ -9,6 +9,7 @@
 #import "WDNewsViewController.h"
 #import "WDNearDetailsViewController.h"
 #import "WDLoginViewController.h"
+#import "WDStoreDetailViewController.h"
 
 @interface WDNewsViewController ()<UIWebViewDelegate>
 {
@@ -69,10 +70,11 @@
 
 - (void)nativelocation:(NSString *)sid{
     
-    WDNearDetailsViewController *detailsVC = [[WDNearDetailsViewController alloc] init];
-    
-    detailsVC.storeId = sid;
-    [self.navigationController pushViewController:detailsVC animated:YES];
+//    WDNearDetailsViewController *detailsVC = [[WDNearDetailsViewController alloc] init];
+    WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+    nearVC.type = 1;
+    nearVC.storeId = sid;
+    [self.navigationController pushViewController:nearVC animated:YES];
     
 }
 

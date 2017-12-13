@@ -46,6 +46,7 @@
     [self.contentView addSubview:self.storeName];
     
     self.disTimeImg = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth - 80, 5, 64, 20)];
+    self.disTimeImg.hidden = YES;
     self.disTimeImg.image = [UIImage imageNamed:@"两小时必达.png"];
     [self.contentView addSubview:self.disTimeImg];
     

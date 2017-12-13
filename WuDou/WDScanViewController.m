@@ -13,6 +13,7 @@
 #import "WDGoodsInfoViewController.h"
 #import "WDNearDetailsViewController.h"
 #import "WDDetailsViewController.h"
+#import "WDStoreDetailViewController.h"
 #import "WDMoreTejiaViewController.h"
 
 @interface WDScanViewController ()<AVCaptureMetadataOutputObjectsDelegate>
@@ -137,10 +138,12 @@
                 NSArray * proStrArr = [proStr componentsSeparatedByString:@"/"];
                 NSString * storeId = proStrArr[0];
                 
-                WDNearDetailsViewController *VC = [[WDNearDetailsViewController alloc] init];
-                VC.storeId = storeId;
+//                WDNearDetailsViewController *VC = [[WDNearDetailsViewController alloc] init];
+                WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+                nearVC.type = 1;
+                nearVC.storeId = storeId;
                 [WDAppInitManeger saveStrData:storeId withStr:@"shopID"];
-                [self.navigationController pushViewController:VC animated:YES];
+                [self.navigationController pushViewController:nearVC animated:YES];
                 [session stopRunning];
             }
             // 跳转到 单个类别产品列表

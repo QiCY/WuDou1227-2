@@ -11,6 +11,7 @@
 #import "WDAddJudgementViewController.h"
 #import "WDPayViewController.h"
 #import "WDNearDetailsViewController.h"
+#import "WDStoreDetailViewController.h"
 
 @interface WDMyOrderCell ()
 
@@ -81,12 +82,13 @@
 //  再次购买
 - (void)buyAgainAction:(UIButton *)buyagain{
         
-    WDNearDetailsViewController *nearDetailsVC = [[WDNearDetailsViewController alloc] init];
+//    WDNearDetailsViewController *nearDetailsVC = [[WDNearDetailsViewController alloc] init];
+    WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+    nearVC.type = 1;
+    nearVC.storeId = self.storeid;
+    [WDAppInitManeger saveStrData:nearVC.storeId withStr:@"shopID"];
     
-    nearDetailsVC.storeId = self.storeid;
-    [WDAppInitManeger saveStrData:nearDetailsVC.storeId withStr:@"shopID"];
-    
-    [_myOrderVC.navigationController pushViewController:nearDetailsVC animated:YES];
+    [_myOrderVC.navigationController pushViewController:nearVC animated:YES];
     
 }
 //  立即支付

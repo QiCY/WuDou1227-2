@@ -12,7 +12,7 @@
 #import "WDJifenMsgViewController.h"
 #import "WDNearDetailsViewController.h"
 #import "WDGoodsInfoViewController.h"
-
+#import "WDStoreDetailViewController.h"
 
 @interface WDJifenStoreViewController ()<UITableViewDelegate,UITableViewDataSource,WDLunBoViewDelegate>
 {
@@ -219,7 +219,9 @@ static NSString *jifenId = @"WDJifenShopCell";
     NSString *type1 = model1.urltype;
     if ([type1 isEqualToString:@"1"]) {
         
-        WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+//        WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+        WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+        nearVC.type = 1;
         NSString *storeId = model1.url;
         nearVC.storeId = storeId;
         [WDAppInitManeger saveStrData:storeId withStr:@"shopID"];

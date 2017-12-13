@@ -17,6 +17,7 @@
 #import "WDNearDetailsViewController.h"
 #import "WDTabbarViewController.h"
 #import "WDFruitsVegetablesViewController.h"
+#import "WDStoreDetailViewController.h"
 
 @interface WDExtentionCollectionView ()
 {
@@ -67,9 +68,10 @@ static NSString *string = @"WDExtentionCell";
     
     if (indexPath.item == 0) {
         
-        WDFruitsVegetablesViewController *nearVC = [[WDFruitsVegetablesViewController alloc] init];
+        WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc] init];
         nearVC.storeId = @"14";
-        nearVC.normalBtnClicked = @"0";
+//        nearVC.normalBtnClicked = @"0";
+        nearVC.type = 0;
         [WDAppInitManeger saveStrData:nearVC.storeId withStr:@"shopID"];
         [_superVC.navigationController pushViewController:nearVC animated:YES];
         

@@ -9,6 +9,7 @@
 #import "WDNearViewController.h"
 #import "WDNearStoreCell.h"
 #import "WDNearDetailsViewController.h"
+#import "WDStoreDetailViewController.h"
 
 #define kSEGMENTKEY @"segmentKey"
 #define kLEFTCATEGORYKEY @"leftKey"
@@ -546,10 +547,12 @@
     }
     if (tableView.tag == 350)
     {
-        WDNearDetailsViewController *detailsVC = [[WDNearDetailsViewController alloc]init];
+//        WDNearDetailsViewController *detailsVC = [[WDNearDetailsViewController alloc]init];
+        WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+        nearVC.type = 1;
         WDStoreInfosModel * nearStore =  self.nearStoreArr[indexPath.row];
         [WDAppInitManeger saveStrData:nearStore.storeid withStr:@"shopID"];
-        [self.navigationController pushViewController:detailsVC animated:YES];
+        [self.navigationController pushViewController:nearVC animated:YES];
     }
 }
 

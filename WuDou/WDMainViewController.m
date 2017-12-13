@@ -31,6 +31,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "CDTitleRolling/DCTitleRolling.h"
+#import "WDStoreDetailViewController.h"
 #define kEdgeLine 5  //行间距
 #define kEdgeClown 10  //列间距
 #define kScaleSize 0.5  //图片缩放比例
@@ -1207,8 +1208,11 @@ static NSString *recommend = @"recommend";
         NSString *type1 = model1.urltype;
         if ([type1 isEqualToString:@"1"]) {
             
-            WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+//            WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+            WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+            nearVC.type = 1;
             NSString *storeId = model1.url;
+            
             nearVC.storeId = storeId;
             [WDAppInitManeger saveStrData:storeId withStr:@"shopID"];
             [self.navigationController pushViewController:nearVC animated:YES];
@@ -1230,7 +1234,9 @@ static NSString *recommend = @"recommend";
         NSString *type2 = model2.urltype;
         if ([type2 isEqualToString:@"1"]) {
             
-            WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+//            WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+            WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+            nearVC.type = 1;
             NSString *storeId = model2.url;
             nearVC.storeId = storeId;
             [WDAppInitManeger saveStrData:storeId withStr:@"shopID"];
@@ -1252,8 +1258,9 @@ static NSString *recommend = @"recommend";
         
         NSString *type3 = model3.urltype;
         if ([type3 isEqualToString:@"1"]) {
-            
-            WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+            WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+            nearVC.type = 1;
+//            WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
             NSString *storeId = model3.url;
             nearVC.storeId = storeId;
             [WDAppInitManeger saveStrData:storeId withStr:@"shopID"];
@@ -1274,8 +1281,9 @@ static NSString *recommend = @"recommend";
         
         NSString *type3 = model4.urltype;
         if ([type3 isEqualToString:@"1"]) {
-            
-            WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+            WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+            nearVC.type = 1;
+//            WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
             NSString *storeId = model4.url;
             nearVC.storeId = storeId;
             [WDAppInitManeger saveStrData:storeId withStr:@"shopID"];
@@ -1390,12 +1398,13 @@ static NSString *recommend = @"recommend";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    WDNearDetailsViewController *detailsVC = [[WDNearDetailsViewController alloc] init];
-    
+//    WDNearDetailsViewController *detailsVC = [[WDNearDetailsViewController alloc] init];
+    WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+    nearVC.type = 1;
     WDStoreInfosModel * nearStore = self.nearStoreArr[indexPath.row];
-    detailsVC.storeId = nearStore.storeid;
+    nearVC.storeId = nearStore.storeid;
     [WDAppInitManeger saveStrData:nearStore.storeid withStr:@"shopID"];
-    [self.navigationController pushViewController:detailsVC animated:YES];
+    [self.navigationController pushViewController:nearVC animated:YES];
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -1501,7 +1510,9 @@ static NSString *recommend = @"recommend";
         WDAdvertisementModel *model4 = self.fourLunArr[indexPath.row];
         NSString *type = model4.urltype;
         if ([type isEqualToString:@"1"]) {
-            WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
+            WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+            nearVC.type = 1;
+//            WDNearDetailsViewController *nearVC = [[WDNearDetailsViewController alloc]init];
             NSString *storeId = model4.url;
             nearVC.storeId = storeId;
             [WDAppInitManeger saveStrData:storeId withStr:@"shopID"];
