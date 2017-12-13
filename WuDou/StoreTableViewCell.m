@@ -79,6 +79,7 @@
     self.discountView = [[DisCountView alloc] init];
     [self.contentView addSubview:self.discountView];
     
+   
     self.upDownBtn = [[UIButton alloc] init];
     [self.upDownBtn setBackgroundImage:[UIImage imageNamed:@"down_arrow"] forState:UIControlStateNormal];
     [self.upDownBtn setBackgroundImage:[UIImage imageNamed:@"up_arrow"] forState:UIControlStateSelected];
@@ -86,6 +87,9 @@
 //    self.upDownBtn.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:self.upDownBtn];
     
+    self.upView = [[UIButton alloc] init];
+    [self.upView addTarget:self action:@selector(upDownBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.contentView addSubview:self.upView];
     
     self.goodsView = [[UIScrollView alloc] init];
     [self.contentView addSubview:self.goodsView];
@@ -115,12 +119,15 @@
         [self.discountView setData:discountList isClose:model.isCloseDis];
         
         self.upDownBtn.frame = CGRectMake(kScreenWidth - 40, 90, 18, 10);
+        self.upView.frame = CGRectMake(kScreenWidth - 60, 80, 50, 30);
         self.discountView.hidden = NO;
         self.upDownBtn.hidden = NO;
+        self.upView.hidden = NO;
         
     }else{
         self.upDownBtn.hidden = YES;
         self.discountView.hidden = YES;
+          self.upView.hidden = YES;
     }
 
     NSArray *goodsList = model.storesproducts[@"subdata"];

@@ -30,6 +30,7 @@
 @property(nonatomic,strong)UILabel *distance;
 @property(nonatomic,strong)UIButton *upDownBtn;
 @property(nonatomic,strong)id data;
+@property(nonatomic,strong)UIButton *upView;
 @property(nonatomic,strong)UIImageView *disTimeImg;
 @property(nonatomic,strong)WDNearbyStoreModel *model;
 
