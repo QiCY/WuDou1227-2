@@ -117,7 +117,7 @@
         }
         
         [self.discountView setData:discountList isClose:model.isCloseDis];
-        
+        NSLog(<#NSString * _Nonnull format, ...#>)
         self.upDownBtn.frame = CGRectMake(kScreenWidth - 40, 90, 18, 10);
         self.upView.frame = CGRectMake(kScreenWidth - 60, 80, 50, 30);
         self.discountView.hidden = NO;
