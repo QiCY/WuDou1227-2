@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WuDou/WDAccountViewController.m"
-            timestampString = "534596662.177304"
+            timestampString = "534946851.406716"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "569"
@@ -257,38 +257,6 @@
             endingLineNumber = "181"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate application:didFinishLaunchingWithOptions:]"
-                  moduleName = "WuDou"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/WuDou1227-2/WuDou/AppDelegate.m"
-                  timestampString = "534694886.84607"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "181"
-                  endingLineNumber = "181"
-                  offsetFromSymbolStart = "776">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke"
-                  moduleName = "WuDou"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/WuDou1227-2/WuDou/AppDelegate.m"
-                  timestampString = "534694886.848905"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "183"
-                  endingLineNumber = "183"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -298,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WuDou/WDAccountViewController.m"
-            timestampString = "534695213.897144"
+            timestampString = "534946851.407206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "531"
@@ -314,12 +282,12 @@
                   moduleName = "WuDou"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WuDou1227-2/WuDou/WDAccountViewController.m"
-                  timestampString = "534695217.453326"
+                  timestampString = "534947129.137575"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "531"
                   endingLineNumber = "531"
-                  offsetFromSymbolStart = "252">
+                  offsetFromSymbolStart = "192">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -329,14 +297,30 @@
                   moduleName = "WuDou"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WuDou1227-2/WuDou/WDAccountViewController.m"
-                  timestampString = "534695217.457247"
+                  timestampString = "534947129.140703"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "533"
                   endingLineNumber = "533"
-                  offsetFromSymbolStart = "112">
+                  offsetFromSymbolStart = "51">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WuDou/WDJifenMsgViewController.m"
+            timestampString = "534947358.896541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
+            landmarkName = "-_createBottomWebView"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

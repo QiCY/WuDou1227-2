@@ -170,9 +170,8 @@ static NSString *headerReuseId = @"WDCatesCollectionReusableView";
             {
                 if(indexPath.row == _selIndex.row)
                 {
-                    cell.colorView.backgroundColor = [UIColor colorWithRed:80/255.0 green:160/255.0 blue:80/255.0 alpha:1.0];
-                    cell.nameLabel.textColor = [UIColor colorWithRed:80/255.0 green:160/255.0 blue:80/255.0 alpha:1.0];
-                    cell.backgroundColor = [UIColor clearColor];
+                    cell.colorView.backgroundColor =KSYSTEM_COLOR;
+                    cell.nameLabel.textColor = KSYSTEM_COLOR;
                 }
                 else
                 {
@@ -187,9 +186,8 @@ static NSString *headerReuseId = @"WDCatesCollectionReusableView";
                 if (indexPath.row == 0)
                 {
                     _selIndex = indexPath;
-                    cell.colorView.backgroundColor = [UIColor colorWithRed:80/255.0 green:160/255.0 blue:80/255.0 alpha:1.0];
-                    cell.nameLabel.textColor = [UIColor colorWithRed:80/255.0 green:160/255.0 blue:80/255.0 alpha:1.0];
-                    cell.backgroundColor = [UIColor whiteColor];
+                    cell.colorView.backgroundColor = KSYSTEM_COLOR;
+                    cell.nameLabel.textColor = KSYSTEM_COLOR;
                 }
                 else
                 {

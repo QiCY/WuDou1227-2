@@ -145,8 +145,8 @@
     if (tableView == _leftTableView) {
         WDListRihtTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"rcell"];
         if (indexPath.row == _selectIndex) {
-            cell.colorView.backgroundColor = [UIColor colorWithRed:80/255.0 green:160/255.0 blue:80/255.0 alpha:1.0];
-            cell.nameLabel.textColor = [UIColor colorWithRed:80/255.0 green:160/255.0 blue:80/255.0 alpha:1.0];
+            cell.colorView.backgroundColor = KSYSTEM_COLOR;
+            cell.nameLabel.textColor = KSYSTEM_COLOR;
             cell.backgroundColor = [UIColor whiteColor];
         }else{
             cell.colorView.backgroundColor = [UIColor clearColor];
