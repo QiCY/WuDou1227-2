@@ -54,6 +54,7 @@
 @property(nonatomic,assign)float startPrice;
 @property(nonatomic,assign)float trancePrice;
 @property(nonatomic,strong)UIView *allMoneyLine;
+@property(nonatomic,strong)UIButton* rightBtn;
 
 @end
 
@@ -62,13 +63,21 @@
 {
     [super viewWillDisappear:animated];
     [_navView removeFromSuperview];
+   self.navigationController.navigationBar.hidden = NO;
 }
 - (void)viewWillAppear:(BOOL)animated
 {
      _state = @"0";
      [self createNavView];
      [self _requestDatasWithSate:_state];
-    
+    [self.goodsView.leftTableView setContentOffset:CGPointMake(0, 0)];
+    [self.goodsView.rightTableView setContentOffset:CGPointMake(0, 0)];
+    if (self.navigationController.navigationBar.hidden) {
+        NSLog(@"navBar Hidden");
+    }else{
+        NSLog(@"navBar Show");
+        self.navigationController.navigationBar.hidden = YES;
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -76,10 +85,31 @@
     self.selectArray = [[NSMutableArray alloc] init];
     self.cateList = [[NSMutableArray alloc] init];
     
-   
+   self.automaticallyAdjustsScrollViewInsets=NO;
     [self createTableView];
     [self createFooterView];
-   
+
+    // 添加通知
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(haveReceiveMsg:) name:@"HAVEMSG" object:nil];
+}
+/** 监听通知的方法：改变图标状态*/
+- (void)haveReceiveMsg:(NSNotification *)noti{
+    
+    NSString *result = noti.userInfo[@"RESULT"];
+    if ([result isEqualToString:@"1"]) {
+        
+        //        AudioServicesPlaySystemSound(1003);
+        [_rightBtn setImage:[UIImage imageNamed:@"xiaoxi11"] forState:UIControlStateNormal];
+        
+    }else{
+        
+        [_rightBtn setImage:[UIImage imageNamed:@"消息图标-1"] forState:UIControlStateNormal];
+        
+    }
+}
+- (void)dealloc
+{
+         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"HAVEMSG" object:nil];
 }
 -(void)backClick
 {
@@ -87,6 +117,8 @@
 }
 
 - (void)createTableView{
+    
+    CGFloat h = CGRectGetMaxY(_navView.frame);
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight -64 - 40)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -103,7 +135,7 @@
     [self.footerView addSubview:self.allNumberBtn];
     self.allMoneyLine =[self createVerLine:CGRectMake(50, 0, 1, 40) color:[UIColor lightGrayColor]];
     [self.footerView addSubview:self.allMoneyLine];
-    self.allCountLab = [[UILabel alloc] initWithFrame:CGRectMake(21, 0, 10, 15)];
+    self.allCountLab = [[UILabel alloc] initWithFrame:CGRectMake(16, 0, 20, 15)];
     self.allCountLab.font = [UIFont systemFontOfSize:10];
     self.allCountLab.textAlignment = 1;
     self.allCountLab.text = @"11";
@@ -187,6 +219,7 @@
    UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(kScreenWidth - 35, 31, 20, 20)];
     [rightBtn setImage:[UIImage imageNamed:@"消息图标-1"] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(chartAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.rightBtn = rightBtn;
     [_navView addSubview:rightBtn];
 }
 //  显示收藏状态
@@ -435,7 +468,7 @@
             if (_storeModel) {
                 [storeInfoView setStoreInfo:_storeModel];
             }
-            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }else{
             
@@ -493,7 +526,13 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-     [self.view endEditing:YES];
+    if (_type == 1) {
+        if ([_searchBar resignFirstResponder]) {
+             [self.view endEditing:YES];
+        }
+        
+    }
+   
     if (tableView == _carTableView)
     {
         WDGoodsInfoViewController * goodsInfoVC = [[WDGoodsInfoViewController alloc]init];
@@ -567,9 +606,6 @@
             
             return;
         }
-        
-        
-        
     }];
 }
 - (void)getSelectArray{

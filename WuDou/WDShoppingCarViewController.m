@@ -278,8 +278,8 @@
     
     WDCarShop *shop = _shopArr[indexPath.row];
 //    WDNearDetailsViewController * detailsVC = [[WDNearDetailsViewController alloc]init];
-    WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
-    nearVC.type = 1;
+        WDStoreDetailViewController *nearVC = [[WDStoreDetailViewController alloc]init];
+        nearVC.type = 1;
         WDCarShop * carShop = shop;
         nearVC.storeId = carShop.shopID;
         [WDAppInitManeger saveStrData:carShop.shopID withStr:@"shopID"];

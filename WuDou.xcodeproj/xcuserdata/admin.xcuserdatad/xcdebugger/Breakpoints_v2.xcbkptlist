@@ -52,13 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WuDou/WDShoppingCarViewController.m"
-            timestampString = "534857023.780535"
+            timestampString = "534928135.028466"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "617"
-            endingLineNumber = "617"
-            landmarkName = "-setQiSonShopWith:"
-            landmarkType = "7">
+            endingLineNumber = "617">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -106,6 +104,38 @@
             startingLineNumber = "18"
             endingLineNumber = "18"
             landmarkName = "-awakeFromNib"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WuDou/WDStoreDetailViewController.m"
+            timestampString = "534932272.884221"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "396"
+            endingLineNumber = "396"
+            landmarkName = "-deleteBtnClicked:count:indexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WuDou/WDStoreDetailViewController.m"
+            timestampString = "534932272.884693"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
+            landmarkName = "-addBtnClicked:count:indexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

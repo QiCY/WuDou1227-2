@@ -3563,53 +3563,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WuDou/WuDou.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = EF7255G3YL;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WuDou/Alipay",
-					"$(PROJECT_DIR)/WuDou/ShareSDK",
-					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/Optional",
-					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
-					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/KaKaoSDK",
-					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/QQSDK",
-					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/RenRenSDK",
-					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/Required",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ./WuDou/WDCommenUsed.pch;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/WuDou/Alipay";
-				INFOPLIST_FILE = WuDou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WuDou/Alipay",
-					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/APSocialSDK",
-					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
-					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/YiXinSDK",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/WuDou",
-				);
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wudou.zxx;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "672cf019-447c-4190-80c5-f30f4599d809";
-				PROVISIONING_PROFILE_SPECIFIER = dis;
-			};
-			name = Debug;
-		};
-		472EF89E1D2CB58A00FF7996 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = WuDou/WuDou.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EF7255G3YL;
@@ -3647,6 +3600,53 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "78b68ed8-0095-46ac-be61-ed5c883d3b39";
 				PROVISIONING_PROFILE_SPECIFIER = dev;
+			};
+			name = Debug;
+		};
+		472EF89E1D2CB58A00FF7996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WuDou/WuDou.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = EF7255G3YL;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WuDou/Alipay",
+					"$(PROJECT_DIR)/WuDou/ShareSDK",
+					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
+					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/KaKaoSDK",
+					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/RenRenSDK",
+					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ./WuDou/WDCommenUsed.pch;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/WuDou/Alipay";
+				INFOPLIST_FILE = WuDou/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WuDou/Alipay",
+					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/APSocialSDK",
+					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
+					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/WeChatSDK",
+					"$(PROJECT_DIR)/WuDou/ShareSDK/Support/PlatformSDK/YiXinSDK",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WuDou",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wudou.zxx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "672cf019-447c-4190-80c5-f30f4599d809";
+				PROVISIONING_PROFILE_SPECIFIER = dis;
 			};
 			name = Release;
 		};

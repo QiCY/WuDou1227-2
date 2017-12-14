@@ -49,7 +49,7 @@
 
 - (void)addBtnClick{
     _count++;
-    self.numberLabel.text = [NSString stringWithFormat:@"%d",_count];
+//    self.numberLabel.text = [NSString stringWithFormat:@"%d",_count];
     if (_delegate) {
         [_delegate addBtnClicked:_model count:[NSString stringWithFormat:@"%d",_count] indexPath:_indexPath];
     }
@@ -58,7 +58,7 @@
 {
     if (_count>0) {
         _count--;
-        self.numberLabel.text = [NSString stringWithFormat:@"%d",_count];
+//        self.numberLabel.text = [NSString stringWithFormat:@"%d",_count];
         if (_delegate) {
             [_delegate deleteBtnClicked:_model count:[NSString stringWithFormat:@"%d",_count] indexPath:_indexPath];
         }
