@@ -545,7 +545,7 @@
 }
 - (UIScrollView *)headScroll{
     if (!_headScroll) {
-        _menuList = [NSMutableArray arrayWithObjects:@"蔬菜区",@"净菜区", nil];
+        _menuList = [NSMutableArray arrayWithObjects:@"生鲜区",@"净菜区", nil];
         _headScroll = [[SYHeadScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 31) withDataList:_menuList didClick:^(NSInteger index) {
             //           点击头部按钮根据index来做出相应处理
             _state = [NSString stringWithFormat:@"%ld",index];
