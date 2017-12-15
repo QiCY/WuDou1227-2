@@ -1471,7 +1471,7 @@ static NSString *recommend = @"recommend";
         NSMutableAttributedString *attribtStr = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"￥%@",model.marketprice] attributes:attribtDic];
         
         
-        
+        cell.lineView.backgroundColor = [UIColor colorWithRed:244/255.0 green:245/255.0 blue:240/255.0 alpha:1];
         
         // 赋值
         cell.marketPrice.attributedText = attribtStr;

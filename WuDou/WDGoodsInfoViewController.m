@@ -89,6 +89,7 @@ static NSString *cellId = @"WDUserJudgeCell";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [[UIView alloc] init];
+    self.tableView.separatorInset = UIEdgeInsetsZero;
     [self.view addSubview:self.tableView];
 }
 - (NSMutableArray *)tableViewHeightArray{
