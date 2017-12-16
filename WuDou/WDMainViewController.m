@@ -826,7 +826,7 @@ static NSString *recommend = @"recommend";
 }
 
 -(void)createNoticeView{
-    _noticeImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0,CGRectGetMaxY(_lunboView1.frame), kScreenWidth, 27)];
+    _noticeImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0,CGRectGetMaxY(_lunboView1.frame), kScreenWidth, kScreenWidth/19)];
     _noticeImgView.image = [UIImage imageNamed:@"banner图下"];
     [_mainScrollView addSubview:_noticeImgView];
 }
