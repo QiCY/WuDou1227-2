@@ -89,6 +89,7 @@ static NSString *cellId = @"WDUserJudgeCell";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [[UIView alloc] init];
+    self.tableView.separatorInset = UIEdgeInsetsZero;
     [self.view addSubview:self.tableView];
 }
 - (NSMutableArray *)tableViewHeightArray{
@@ -194,16 +195,16 @@ static NSString *cellId = @"WDUserJudgeCell";
     [self.navigationItem setHidesBackButton:YES];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 15, 20);
-    [btn setImageEdgeInsets:UIEdgeInsetsMake(4, 3, 4,3)];
+    btn.frame = CGRectMake(0, 0, 60, 40);
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(12, 5, 12,45)];
     [btn setImage:[UIImage imageNamed:@"fanhui.png"] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(goBackAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem*back = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.leftBarButtonItem = back;
     
     //  右侧聊天信息按钮
-    rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 28)];
-    [rightBtn setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+    rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 40)];
+    [rightBtn setImageEdgeInsets:UIEdgeInsetsMake(8, 35, 7, 0)];
     [rightBtn setImage:[UIImage imageNamed:@"消息图标-1"] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(chartAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
@@ -395,7 +396,7 @@ static NSString *cellId = @"WDUserJudgeCell";
     
     
     if (!_lunboView) {
-        CGFloat lunboH =kScreenHeight -268 -64 - 50 ;
+        CGFloat lunboH =kScreenWidth/4*3 ;
         _lunboView = [WDLunBoView lunBoViewWithFrame:CGRectMake(0, 0, kScreenWidth, lunboH) delegate:self placeholderImage:[UIImage imageNamed:@"noproduct.png"]];
         _lunboView.autoScrollTimeInterval = 2.0f;
         _lunboView.showPageControl = YES;
@@ -1085,9 +1086,8 @@ static NSString *cellId = @"WDUserJudgeCell";
     }
     if (tableView == self.tableView) {
         if (indexPath.section == 0) {
-            CGFloat lunboH =kScreenHeight -268 -64 - 50;
+            CGFloat lunboH =kScreenWidth/4*3;
             return lunboH;
-            return kScreenWidth/2+200;
         }
         if (indexPath.section == 1) {
             return 80;

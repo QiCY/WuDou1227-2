@@ -30,11 +30,16 @@
     }
     return self;
 }
-- (void)setDataArray:(NSMutableArray *)dataList selectList:(NSMutableArray *)selectList{
+- (void)setDataArray:(NSMutableArray *)dataList selectList:(NSMutableArray *)selectList {
     self.dataArray = dataList;
     self.selectArray = selectList;
     [self.leftTableView reloadData];
     [self.rightTableView reloadData];
+}
+- (void)setDataArray:(NSMutableArray *)dataList selectList:(NSMutableArray *)selectList indexPath:(NSIndexPath *)indexPath{
+    self.dataArray = dataList;
+    self.selectArray = selectList;
+    [self.rightTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 - (UITableView *)createTableView{
     UITableView *tableView = [[UITableView alloc] init];

@@ -84,7 +84,7 @@
     // Do any additional setup after loading the view.
     self.selectArray = [[NSMutableArray alloc] init];
     self.cateList = [[NSMutableArray alloc] init];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
    self.automaticallyAdjustsScrollViewInsets=NO;
     [self createTableView];
     [self createFooterView];
@@ -374,22 +374,8 @@
         [WDGoodList upDateGood:good1];
     }
     [self getAllMoney];
-    [self.goodsView setDataArray:_cateList selectList:_selectArray];
+    [self.goodsView setDataArray:_cateList selectList:_selectArray indexPath:indexPath];
     
-}
-#pragma mark UISearchBarDelegate
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    
-    if (![searchBar.text isEqualToString:@""]) {
-        
-        WDDetailsViewController *searchVC = [[WDDetailsViewController alloc] init];
-        searchVC.searchMsg = searchBar.text;
-        searchVC.navtitle = @"搜索列表";
-        searchVC.isCategories = 1;
-        [self.navigationController pushViewController:searchVC animated:YES];
-    }
-    
-    [searchBar resignFirstResponder];
 }
 
 - (void)deleteBtnClicked:(WDSearchInfosModel *)good count:(NSString *)count indexPath:(NSIndexPath *)indexPath
@@ -416,7 +402,21 @@
         [self getAllMoney];
     }
     
-     [self.goodsView setDataArray:_cateList selectList:_selectArray];
+     [self.goodsView setDataArray:_cateList selectList:_selectArray indexPath:indexPath];
+}
+#pragma mark UISearchBarDelegate
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    
+    if (![searchBar.text isEqualToString:@""]) {
+        
+        WDDetailsViewController *searchVC = [[WDDetailsViewController alloc] init];
+        searchVC.searchMsg = searchBar.text;
+        searchVC.navtitle = @"搜索列表";
+        searchVC.isCategories = 1;
+        [self.navigationController pushViewController:searchVC animated:YES];
+    }
+    
+    [searchBar resignFirstResponder];
 }
 
 #pragma mark ================UITableView Delegate================
@@ -532,7 +532,6 @@
         }
         
     }
-   
     if (tableView == _carTableView)
     {
         WDGoodsInfoViewController * goodsInfoVC = [[WDGoodsInfoViewController alloc]init];

@@ -71,8 +71,8 @@
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    btn.frame = CGRectMake(0, 0, 15, 20);
-    [btn setImageEdgeInsets:UIEdgeInsetsMake(4, 3, 4,3)];
+    btn.frame = CGRectMake(0, 0, 25, 40);
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(14, 8, 14,8)];
     [btn setImage:[UIImage imageNamed:@"fanhui.png"] forState:UIControlStateNormal];
     
     [btn addTarget:self action:@selector(goBackAction) forControlEvents:UIControlEventTouchUpInside];

@@ -27,5 +27,6 @@
 @property(nonatomic,assign)NSInteger selectIndex;
 @property(nonatomic,assign)BOOL  isDidSelect;
 @property(nonatomic,assign)BOOL isScroll;
+- (void)setDataArray:(NSMutableArray *)dataList selectList:(NSMutableArray *)selectList indexPath:(NSIndexPath *)indexPath;
 - (void)setDataArray:(NSMutableArray *)dataList selectList:(NSMutableArray *)selectList;
 @end

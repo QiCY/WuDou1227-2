@@ -526,7 +526,7 @@ static NSString *recommend = @"recommend";
         if (colom>0) {
             row = row+1;
         }
-        h= h + row*181.5+135;
+        h= h + row*181.5+kScreenWidth/8*3;
     }
     return h;
 }
@@ -538,7 +538,7 @@ static NSString *recommend = @"recommend";
     _goodChoiceCV.frame = CGRectMake(0, 0, kScreenWidth, [self getGoodsChoiceViewHeight:self.recommendGoodsList]);
     NSLog(@"_goodVc height is %f",_goodChoiceCV.frame.size.height);
     _recommendView.frame = CGRectMake(0, CGRectGetMaxY(_bottomView.frame), kScreenWidth, itemHeight+40);
-    _nearStoreHeadImg.frame = CGRectMake(0, CGRectGetMaxY(_recommendView.frame), kScreenWidth, 140);
+    _nearStoreHeadImg.frame = CGRectMake(0, CGRectGetMaxY(_recommendView.frame), kScreenWidth, kScreenWidth/8*3);
     _nearStoreTableView.frame = CGRectMake(0, CGRectGetMaxY(_nearStoreHeadImg.frame), kScreenWidth, self.nearStoreArr.count * 80+40);
     [self getMenuTypeList];
 
@@ -813,7 +813,7 @@ static NSString *recommend = @"recommend";
 /* 创建第一个轮播器 **/
 - (void)_createFirstLunboView
 {
-    CGFloat lunboH = 135;
+    CGFloat lunboH = kScreenWidth/8*3;
     _lunboView1 = [WDLunBoView lunBoViewWithFrame:CGRectMake(0, 0, kScreenWidth, lunboH) delegate:self placeholderImage:[UIImage imageNamed:@"noproduct"]];
 //    _lunboView1.imageURLStringsGroup = _lunboImagesArray;
     _lunboView1.autoScrollTimeInterval = 3.5f;
@@ -1082,7 +1082,7 @@ static NSString *recommend = @"recommend";
 /* 创建第三个轮播器 **/
 - (void)_createThirdLunboView{
     
-    _lunboView3 = [WDLunBoView lunBoViewWithFrame:CGRectMake(0, CGRectGetMaxY(_tejiaView.frame), kScreenWidth, 145) delegate:self placeholderImage:[UIImage imageNamed:@"noproduct.png"]];
+    _lunboView3 = [WDLunBoView lunBoViewWithFrame:CGRectMake(0, CGRectGetMaxY(_tejiaView.frame), kScreenWidth, kScreenWidth/3) delegate:self placeholderImage:[UIImage imageNamed:@"noproduct.png"]];
 //    _lunboView3.imageURLStringsGroup = _lunboImagesArray;
     _lunboView3.autoScrollTimeInterval = 3.5f;
     _lunboView3.showPageControl = YES;
@@ -1143,7 +1143,7 @@ static NSString *recommend = @"recommend";
     layout.minimumInteritemSpacing = 0.75;
     layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;  //水平布局
-    layout.headerReferenceSize = CGSizeMake(kScreenWidth, 140);
+    layout.headerReferenceSize = CGSizeMake(kScreenWidth, kScreenWidth/8*3);
     
     _goodChoiceCV = [[WDGoodChoiceColllectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 180 * 3+140) collectionViewLayout:layout];
     _goodChoiceCV.scrollEnabled = NO;
@@ -1157,7 +1157,7 @@ static NSString *recommend = @"recommend";
 /* 创建附近店铺视图 **/
 - (void)_createNearStoreView{
     
-    UIImageView *nearStoreHeadImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_recommendView.frame), kScreenWidth, 140)];
+    UIImageView *nearStoreHeadImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_recommendView.frame), kScreenWidth, kScreenWidth/8*3)];
     nearStoreHeadImg.image = [UIImage imageNamed:@"recommend_theme"];
     [_mainScrollView addSubview:nearStoreHeadImg];
     _nearStoreHeadImg = nearStoreHeadImg;

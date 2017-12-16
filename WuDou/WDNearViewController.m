@@ -306,8 +306,8 @@
     
     [self.navigationItem setHidesBackButton:YES];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 15, 20);
-     [btn setImageEdgeInsets:UIEdgeInsetsMake(4, 3, 4,3)];
+    btn.frame = CGRectMake(0, 0, 60, 40);
+      [btn setImageEdgeInsets:UIEdgeInsetsMake(12, 5, 12,45)];
     [btn setImage:[UIImage imageNamed:@"fanhui"] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(goBackAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *back = [[UIBarButtonItem alloc]initWithCustomView:btn];

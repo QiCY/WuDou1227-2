@@ -117,8 +117,8 @@ static NSString *jifenId = @"WDJifenShopCell";
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    btn.frame = CGRectMake(0, 0, 15, 20);
-    [btn setImageEdgeInsets:UIEdgeInsetsMake(4, 3, 4,3)];
+    btn.frame = CGRectMake(0, 0, 60, 40);
+     [btn setImageEdgeInsets:UIEdgeInsetsMake(12, 5, 12,45)];
     [btn setImage:[UIImage imageNamed:@"fanhui.png"] forState:UIControlStateNormal];
     
     [btn addTarget:self action:@selector(goBackAction) forControlEvents:UIControlEventTouchUpInside];
@@ -158,7 +158,7 @@ static NSString *jifenId = @"WDJifenShopCell";
     //    NSArray *testArray = @[@"http://pic24.nipic.com/20121025/10444819_041559015351_2.jpg",@"http://a.hiphotos.baidu.com/zhidao/pic/item/09fa513d269759eea57ece50b2fb43166d22df7b.jpg",@"http://imgsrc.baidu.com/forum/pic/item/e73649178a82b9013946e4b8738da9773b12ef98.jpg"];
     //    _lunboArray = [NSMutableArray arrayWithArray:testArray];
     
-    CGFloat lunboH = kScreenWidth / 3.4;
+    CGFloat lunboH = kScreenWidth / 8*3;
     _topLunbo = [WDLunBoView lunBoViewWithFrame:CGRectMake(0, 0, kScreenWidth, lunboH) delegate:self placeholderImage:[UIImage imageNamed:@"noproduct.png"]];
     _topLunbo.autoScrollTimeInterval = 2.0f;
     _topLunbo.showPageControl = YES;
