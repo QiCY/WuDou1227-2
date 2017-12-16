@@ -114,11 +114,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WuDou/WDStoreDetailViewController.m"
-            timestampString = "535021929.625199"
+            timestampString = "535101263.349102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "382"
-            endingLineNumber = "382"
+            startingLineNumber = "388"
+            endingLineNumber = "388"
             landmarkName = "-deleteBtnClicked:count:indexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -130,11 +130,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WuDou/WDStoreDetailViewController.m"
-            timestampString = "535021929.625651"
+            timestampString = "535101263.349479"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "375"
-            endingLineNumber = "375"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
             landmarkName = "-addBtnClicked:count:indexPath:"
             landmarkType = "7">
          </BreakpointContent>

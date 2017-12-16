@@ -55,6 +55,7 @@
 @property(nonatomic,assign)float trancePrice;
 @property(nonatomic,strong)UIView *allMoneyLine;
 @property(nonatomic,strong)UIButton* rightBtn;
+@property(nonatomic,assign)BOOL isScrollTop;
 
 @end
 
@@ -70,8 +71,8 @@
      _state = @"0";
      [self createNavView];
      [self _requestDatasWithSate:_state];
-    [self.goodsView.leftTableView setContentOffset:CGPointMake(0, 0)];
-    [self.goodsView.rightTableView setContentOffset:CGPointMake(0, 0)];
+    
+   
     if (self.navigationController.navigationBar.hidden) {
         NSLog(@"navBar Hidden");
     }else{
@@ -84,6 +85,7 @@
     // Do any additional setup after loading the view.
     self.selectArray = [[NSMutableArray alloc] init];
     self.cateList = [[NSMutableArray alloc] init];
+    _isScrollTop = NO;
     self.view.backgroundColor = [UIColor whiteColor];
    self.automaticallyAdjustsScrollViewInsets=NO;
     [self createTableView];
@@ -331,17 +333,21 @@
 }
 - (void)didScrollToUp
 {
+    
     [UIView animateWithDuration:0.25 animations:^{
          self.tableView.contentOffset = CGPointMake(0, 80);
         self.titleLab.text = _storeModel.name;
+        _isScrollTop = YES;
     }];
     
 }
 - (void)didScrollToDown
 {
+    
     [UIView animateWithDuration:0.25 animations:^{
         self.tableView.contentOffset = CGPointMake(0, 0);
         self.titleLab.text =@"店铺详情";
+        _isScrollTop = NO;
     }];
     
 }
@@ -590,6 +596,17 @@
         _cateList = array[1];
         [self getAllMoney];
         [self.tableView reloadData];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //刷新完成
+            if (_isScrollTop) {
+                self.tableView.contentOffset = CGPointMake(0, 80);
+                self.titleLab.text = _storeModel.name;
+            }else{
+                self.tableView.contentOffset = CGPointMake(0, 0);
+                self.titleLab.text =@"店铺详情";
+            }
+        });
         //  默认显示第一个分类 空表示默认
         if (_cateList.count == 0) {
             
