@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *shopImageView;
 @property(weak,nonatomic) IBOutlet UIImageView *shopHotImgView;
 @property (weak, nonatomic) IBOutlet UILabel *shopsName;
-
+@property (weak,nonatomic)IBOutlet UIView *lineView;
 @property (weak, nonatomic) IBOutlet UILabel *shopsPrice;
 @property (weak, nonatomic) IBOutlet UILabel *marketPrice;
 
