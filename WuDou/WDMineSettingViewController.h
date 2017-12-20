@@ -16,5 +16,5 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *headerView;
 @property (weak, nonatomic) IBOutlet UIButton *headerBtn;
-
+@property (weak, nonatomic) IBOutlet UIButton *logOutBtn;
 @end

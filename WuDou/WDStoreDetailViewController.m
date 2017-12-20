@@ -68,7 +68,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated
 {
-     _state = @"0";
+     _state = @"1";
      [self createNavView];
      [self _requestDatasWithSate:_state];
     
@@ -357,6 +357,7 @@
     WDGoodsInfoViewController * goodsInfoVC = [[WDGoodsInfoViewController alloc]init];
     [self.navigationController pushViewController:goodsInfoVC animated:YES];
     NSString * goodID = good.pid;
+    goodsInfoVC.goodsImage = good.img;
     [WDAppInitManeger saveStrData:goodID withStr:@"goodID"];
 }
 -(void)addBtnClicked:(WDSearchInfosModel *)good count:(NSString *)count indexPath:(NSIndexPath *)indexPath
@@ -545,6 +546,7 @@
         NSMutableArray * shopArray = [self getSelectGood];
         WDChooseGood * good = shopArray[indexPath.row];
         NSString * goodID = good.goodID;
+        goodsInfoVC.goodsImage = good.goodImage;
         [WDAppInitManeger saveStrData:goodID withStr:@"goodID"];
     }
 }
@@ -553,7 +555,7 @@
         _menuList = [NSMutableArray arrayWithObjects:@"生鲜区",@"净菜区", nil];
         _headScroll = [[SYHeadScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 31) withDataList:_menuList didClick:^(NSInteger index) {
             //           点击头部按钮根据index来做出相应处理
-            _state = [NSString stringWithFormat:@"%ld",index];
+            _state = [NSString stringWithFormat:@"%ld",index+1];
             [self _requestDatasWithSate:_state];
             
         }];

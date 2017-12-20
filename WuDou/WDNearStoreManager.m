@@ -168,7 +168,7 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"APP_ACCESS_TOKEN"];
-    NSString *urlStr = [NSString stringWithFormat:@"%@api/storesinfo2/Load?access_token=%@&storeid=%@&sate=%@",API_PORT,token,storeId,sate];
+    NSString *urlStr = [NSString stringWithFormat:@"%@api/storesinfo3/Load?access_token=%@&storeid=%@&cateid=%@",API_PORT,token,storeId,sate];
     
     NSLog(@"requestStoreInfosWithStoreId   url ======%@",urlStr);
     [manager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {

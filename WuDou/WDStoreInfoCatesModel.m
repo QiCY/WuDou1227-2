@@ -22,13 +22,24 @@
         _cateid = [userDic[@"cateid"]copy];
         _name = [userDic[@"name"]copy];
         _catenumber = [userDic[@"catenumber"]copy];
-        NSDictionary *productsDic = userDic[@"products"];
-        NSMutableArray *productList = [[NSMutableArray alloc] init];
-        NSArray *goodsList =productsDic[@"data"];
-        for (NSDictionary *data in goodsList) {
-            WDSearchInfosModel *model = [WDSearchInfosModel userWithDictionary:data];
-            [productList addObject:model];
+        _tag = userDic[@"tag"];
+        id obj = userDic[@"products"];
+         NSMutableArray *productList = [[NSMutableArray alloc] init];
+        if ([obj isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *productsDic = userDic[@"products"];
+            if (productsDic) {
+                NSArray *goodsList =productsDic[@"data"];
+                for (NSDictionary *data in goodsList) {
+                    WDSearchInfosModel *model = [WDSearchInfosModel userWithDictionary:data];
+                    [productList addObject:model];
+                }
+            }
         }
+        
+        
+       
+      
+      
         _productsList = productList;
     }
     return self;

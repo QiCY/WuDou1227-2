@@ -36,7 +36,7 @@ static NSString *string = @"WDMineSettingCell";
     //  设置导航栏标题颜色
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.view.backgroundColor = kViewControllerBackgroundColor;
-    
+    self.logOutBtn.backgroundColor = KSYSTEM_COLOR;
     [self _setupNavigation];
     
     [self _setupArrays];

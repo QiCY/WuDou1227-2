@@ -11,7 +11,7 @@
 @interface WDStoreInfoCatesModel : NSObject
 
 /** 属性*/
-@property(nonatomic, copy)NSString *cateid, *name, *catenumber;
+@property(nonatomic, copy)NSString *cateid, *name, *catenumber,*tag;
 @property(nonatomic,strong)NSMutableArray *productsList;
 
 +(id)userWithDictionary:(NSDictionary*)userDic;
