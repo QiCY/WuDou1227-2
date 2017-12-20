@@ -138,7 +138,8 @@ static NSString *string = @"WDMainCell";
         
 #warning 改动：我的二手品隐藏  @"二手品图标.png",@"我的二手品"
         
-                _mainImageViewArray = @[@[@"全部订单.png",@"shanghu.png",@"消息2.png",@"优惠券.png"],@[@"位置.png",@"评价2.png",@"收藏2.png",@"消息2.png",@"bianming.png",@"分享.png",@"帮助.png"]];
+//                _mainImageViewArray = @[@[@"全部订单.png",@"shanghu.png",@"消息2.png",@"优惠券.png"],@[@"位置.png",@"评价2.png",@"收藏2.png",@"消息2.png",@"bianming.png",@"分享.png",@"帮助.png"]];
+        _mainImageViewArray = @[@[@"myorders.png",@"mine_storeOder.png",@"mymessage.png", @"mydiscount.png"],@[@"myaddress.png",@"mycomment.png",@"myfavorite.png",@"mymessage.png",@"myservices.png",@"myshare.png",@"myhelp.png"]];
                 _listLabelArray = @[@[@"全部订单",@"商户订单",@"商户消息",@"我的优惠券"],@[@"管理地址",@"我的评价",@"我的收藏",@"我的消息",@"我的便民服务",@"分享到朋友圈",@"帮助中心"]];
         
 //        _mainImageViewArray = @[@[@"全部订单.png",@"shanghu.png",@"消息2.png",@"优惠券.png"],@[@"位置.png",@"评价2.png",@"收藏2.png",@"消息2.png",@"分享.png",@"帮助.png"]];
@@ -156,7 +157,9 @@ static NSString *string = @"WDMainCell";
     }
     if([self.showOrderState isEqualToString:@"2"]){  //配送员
         
-        _mainImageViewArray = @[@[@"全部订单.png",@"shanghu.png",@"优惠券.png"],@[@"位置.png",@"评价2.png",@"收藏2.png",@"消息2.png",@"bianming.png",@"分享.png",@"帮助.png"]];
+//        _mainImageViewArray = @[@[@"全部订单.png",@"shanghu.png",@"优惠券.png"],@[@"位置.png",@"评价2.png",@"收藏2.png",@"消息2.png",@"bianming.png",@"分享.png",@"帮助.png"]];
+          _mainImageViewArray = @[@[@"myorders.png",@"mine_storeOder.png",@"mydiscount.png"],@[@"myaddress.png",@"mycomment.png",@"myfavorite.png",@"mymessage.png",@"myservices.png",@"myshare.png",@"myhelp.png"]];
+        
         _listLabelArray = @[@[@"全部订单",@"配送员订单",@"我的优惠券"],@[@"管理地址",@"我的评价",@"我的收藏",@"我的消息",@"我的便民服务",@"分享到朋友圈",@"帮助中心"]];
         
 //        _mainImageViewArray = @[@[@"全部订单.png",@"shanghu.png",@"消息2.png",@"优惠券.png"],@[@"位置.png",@"评价2.png",@"收藏2.png",@"消息2.png",@"分享.png",@"帮助.png"]];

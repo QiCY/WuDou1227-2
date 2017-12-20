@@ -65,11 +65,12 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (scrollView == _rightTableView) {
-        NSIndexPath* index = [_rightTableView indexPathForRowAtPoint:CGPointMake(scrollView.contentOffset.x, scrollView.contentOffset.y)];
-        _selectIndex = index.section;
         if (_isDidSelect) {
             return;
         }
+        NSIndexPath* index = [_rightTableView indexPathForRowAtPoint:CGPointMake(scrollView.contentOffset.x, scrollView.contentOffset.y)];
+        _selectIndex = index.section;
+       
         [_leftTableView reloadData];
         
         
@@ -187,10 +188,16 @@
             _selectIndex = indexPath.row;
             [_leftTableView reloadData];
             WDStoreInfoCatesModel *model = _dataArray[_selectIndex];
-            if (model.productsList.count>0) {
-                [_rightTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:_selectIndex] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+            if ([model.tag isEqualToString:@"1"]) {
+              
+            }else{
+                if (model.productsList.count>0) {
+                    [_rightTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:_selectIndex] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+                }
+                _isDidSelect = NO;
             }
-            _isDidSelect = NO;
+            
+            
         }
     }else{
 
