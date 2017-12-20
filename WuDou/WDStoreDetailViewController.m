@@ -593,6 +593,7 @@
             _storeModel = model;
             NSString *state = model.hasfavorite;
             _favoriteBtn.selected = [state boolValue];
+            [self checkIsOpen:model];
         }
         
         _cateList = array[1];
@@ -625,6 +626,31 @@
             return;
         }
     }];
+}
+- (void)checkIsOpen:(WDStoreInfosModel *)model
+{
+    if ([model.isopen isEqualToString:@"1"]) {
+        UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:@"本店已打烊" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alertView addAction:action];
+        [self presentViewController:alertView animated:YES completion:^{
+            
+        }];
+    }
+    
+    if ([model.isDistributioning isEqualToString:@"1"]) {
+        UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:model.isDistributioningMsg preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alertView addAction:action];
+        [self presentViewController:alertView animated:YES completion:^{
+            
+        }];
+    }
+   
 }
 - (void)getSelectArray{
     [_selectArray removeAllObjects];

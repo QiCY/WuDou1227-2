@@ -29,6 +29,10 @@
         _monthlysales = [userDic[@"monthlysales"]copy];
         _hasfavorite = [userDic[@"hasfavorite"]copy];
         _hascoupons = [userDic[@"hascoupons"]copy];
+        _isopen = [userDic[@"isopen"]copy];
+        _isDistributioning = [userDic[@"isDistributioning"]copy];
+        _isDistributioningMsg = [userDic[@"isDistributioningMsg"]copy];
+        _storemodel = [userDic[@"storemodel"]copy];
     }
     return self ;
 }

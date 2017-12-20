@@ -528,7 +528,7 @@
     
     WDPayViewController * payVC = [[WDPayViewController alloc]init];
     
-    [WDNearStoreManager requestSubmitOrderWithAddressId:self.addressId autoTimeId:self.transTime.autotimeid orderInfo:self.orderinfo buyyerMark:_beizhu completion:^(NSString *osn, NSString *paysn, NSString *error) {
+    [WDNearStoreManager requestSubmitOrderWithAddressId:self.addressId autoTimeId:self.transTime.autotimeid couponId:self.coupon? self.coupon.couponid:@"" orderInfo:self.orderinfo buyyerMark:_beizhu completion:^(NSString *osn, NSString *paysn, NSString *error) {
         
         if (error) {
             

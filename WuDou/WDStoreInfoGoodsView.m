@@ -18,13 +18,13 @@
         self.selectArray = [NSMutableArray new];
         self.selectIndex = 0;
         self.leftTableView = [self createTableView];
-        self.leftTableView.frame = CGRectMake(0, 0, kScreenWidth/4, frame.size.height);
+        self.leftTableView.frame = CGRectMake(0, 0, 120, frame.size.height);
         [self.leftTableView registerNib:[UINib nibWithNibName:@"WDListRihtTableViewCell" bundle:nil] forCellReuseIdentifier:@"rcell"];
         self.leftTableView.backgroundColor = [UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1.0];
         [self addSubview:self.leftTableView];
         
         self.rightTableView = [self createTableView];
-        self.rightTableView.frame = CGRectMake(kScreenWidth/4, 0, kScreenWidth/4*3, frame.size.height);
+        self.rightTableView.frame = CGRectMake(120, 0, kScreenWidth - 120, frame.size.height);
         [self.rightTableView registerNib:[UINib nibWithNibName:@"WDNearDetailsTableViewCell" bundle:nil] forCellReuseIdentifier:@"Ncell"];
         [self addSubview:self.rightTableView];
     }
@@ -115,6 +115,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (tableView == _rightTableView) {
+         WDStoreInfoCatesModel *cateModel = _dataArray[section];
+        if ([cateModel.tag isEqualToString:@"1"]) {
+            return 0;
+        }
         return 30;
     }
     return 0;
@@ -150,20 +154,31 @@
 {
     if (tableView == _leftTableView) {
         WDListRihtTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"rcell"];
-        if (indexPath.row == _selectIndex) {
-            cell.colorView.backgroundColor = KSYSTEM_COLOR;
-            cell.nameLabel.textColor = KSYSTEM_COLOR;
-            cell.backgroundColor = [UIColor whiteColor];
-        }else{
-            cell.colorView.backgroundColor = [UIColor clearColor];
-            cell.nameLabel.textColor = [UIColor blackColor];
-            cell.backgroundColor = [UIColor clearColor];
-        }
+        
         if (_dataArray.count > 0)
         {
             WDStoreInfoCatesModel * details = _dataArray[indexPath.row];
             cell.nameLabel.text = details.name;
-            cell.nameLabel.font = [UIFont systemFontOfSize:13];
+            if ([details.tag isEqualToString:@"1"]) {
+                cell.colorView.backgroundColor = KSYSTEM_COLOR;
+                cell.nameLabel.textColor = KSYSTEM_COLOR;
+                cell.backgroundColor = [UIColor clearColor];
+                cell.nameLabel.font = [UIFont systemFontOfSize:15];
+                
+            }else{
+                cell.nameLabel.font = [UIFont systemFontOfSize:13];
+                if (indexPath.row == _selectIndex) {
+                     cell.colorView.backgroundColor = [UIColor clearColor];
+//                    cell.colorView.backgroundColor = KSYSTEM_COLOR;
+                    cell.nameLabel.textColor = KSYSTEM_COLOR;
+                    cell.backgroundColor = [UIColor clearColor];
+                }else{
+                    cell.colorView.backgroundColor = [UIColor clearColor];
+                    cell.nameLabel.textColor = [UIColor blackColor];
+                    cell.backgroundColor = [UIColor clearColor];
+                }
+            }
+            
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
@@ -191,6 +206,7 @@
             if ([model.tag isEqualToString:@"1"]) {
               
             }else{
+               
                 if (model.productsList.count>0) {
                     [_rightTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:_selectIndex] atScrollPosition:UITableViewScrollPositionTop animated:NO];
                 }
