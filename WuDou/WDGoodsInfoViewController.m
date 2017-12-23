@@ -475,7 +475,7 @@ static NSString *cellId = @"WDUserJudgeCell";
 //  减号按钮
 - (void)subtractBtnAction:(UIButton *)subtract{
     
-    if ([self checkStoreDistance] && [self checkStoreOpen]) {
+    
         NSInteger count = [_goodsCount.text integerValue];
         UILabel * countLabel = [self.view viewWithTag:345];
         if (count > 0)
@@ -551,9 +551,6 @@ static NSString *cellId = @"WDUserJudgeCell";
             
             [WDGoodList deleteGoodWithGoodsId:[self.goodsInfosModel.pid intValue]];  // 当减到0时删除该商品id下的记录
         }
-    }
-    
-    
 }
 
 - (void)checkIsOpen:(WDStoreMsgModel *)model
@@ -561,7 +558,7 @@ static NSString *cellId = @"WDUserJudgeCell";
     if ([model.isopen isEqualToString:@"1"]) {
         UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:@"本店已打烊" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            [self.navigationController popViewControllerAnimated:YES];
+//            [self.navigationController popViewControllerAnimated:YES];
         }];
         [alertView addAction:action];
         [self presentViewController:alertView animated:YES completion:^{
@@ -585,7 +582,7 @@ static NSString *cellId = @"WDUserJudgeCell";
 //  加号按钮
 - (void)addBtnAction:(UIButton *)add{
     
-    if ([self checkStoreDistance] && [self checkStoreOpen]) {
+   
         NSInteger count = [_goodsCount.text integerValue];
         UILabel * countLabel = [self.view viewWithTag:345];
         if (count >= 0) {
@@ -665,16 +662,7 @@ static NSString *cellId = @"WDUserJudgeCell";
             gotoCarBtn.enabled = NO;
             gotoCarBtn.backgroundColor = [UIColor lightGrayColor];
         }
-    }else{
-        qisongBtn.enabled = NO;
-        qisongBtn.backgroundColor = [UIColor lightGrayColor];
-        [qisongBtn setTitle:@"去结算" forState:UIControlStateNormal];
-        
-        gotoCarBtn.enabled = NO;
-        gotoCarBtn.backgroundColor = [UIColor lightGrayColor];
-    }
-    
-    
+   
 }
 
 /* 创建店铺信息视图 **/

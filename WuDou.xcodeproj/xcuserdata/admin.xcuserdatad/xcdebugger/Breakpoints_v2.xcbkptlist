@@ -183,7 +183,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "561"
             endingLineNumber = "561"
-            landmarkName = "-addBtnAction:"
+            landmarkName = "-checkIsOpen:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -199,7 +199,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "570"
             endingLineNumber = "570"
-            landmarkName = "-addBtnAction:"
+            landmarkName = "-checkIsOpen:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -215,8 +215,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "585"
             endingLineNumber = "585"
-            landmarkName = "-addBtnAction:"
-            landmarkType = "7">
+            landmarkName = "WDGoodsInfoViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -263,7 +263,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "189"
             endingLineNumber = "189"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

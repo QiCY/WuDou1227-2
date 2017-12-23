@@ -362,7 +362,7 @@
 }
 -(void)addBtnClicked:(WDSearchInfosModel *)good count:(NSString *)count indexPath:(NSIndexPath *)indexPath
 {
-    if ([self storeIsOpen] && [self storeOverDistance]) {
+    
         WDSearchInfosModel * goods = good;
         WDStoreInfosModel *model1 = _storeModel;
         WDChooseGood * good1 = [[WDChooseGood alloc]init];
@@ -383,9 +383,6 @@
         }
         [self getAllMoney];
         [self.goodsView setDataArray:_cateList selectList:_selectArray indexPath:indexPath];
-    }
-    
-    
 }
 
 - (void)deleteBtnClicked:(WDSearchInfosModel *)good count:(NSString *)count indexPath:(NSIndexPath *)indexPath
@@ -649,7 +646,7 @@
     if ([model.isopen isEqualToString:@"1"]) {
         UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:@"本店已打烊" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            [self.navigationController popViewControllerAnimated:YES];
+//            [self.navigationController popViewControllerAnimated:YES];
         }];
         [alertView addAction:action];
         [self presentViewController:alertView animated:YES completion:^{
