@@ -35,6 +35,11 @@
     self.selectArray = selectList;
     [self.leftTableView reloadData];
     [self.rightTableView reloadData];
+    if (self.dataArray.count>0) {
+         [self.rightTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    }
+   
+   
 }
 - (void)setDataArray:(NSMutableArray *)dataList selectList:(NSMutableArray *)selectList indexPath:(NSIndexPath *)indexPath{
     self.dataArray = dataList;

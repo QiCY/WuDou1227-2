@@ -45,7 +45,7 @@
     self.storeName.font = [UIFont systemFontOfSize:16];
     [self.contentView addSubview:self.storeName];
     
-    self.disTimeImg = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth - 80, 5, 64, 20)];
+    self.disTimeImg = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth - 80, 10, 64, 20)];
     self.disTimeImg.hidden = YES;
     self.disTimeImg.image = [UIImage imageNamed:@"两小时必达.png"];
     [self.contentView addSubview:self.disTimeImg];
@@ -107,6 +107,12 @@
     if ([data isKindOfClass:[WDNearbyStoreModel class]]) {
         model = (WDNearbyStoreModel *)data;
         self.model = model;
+    }
+    if ([self.model.storemodel isEqualToString:@"自营"]) {
+        
+        self.disTimeImg.hidden = YES;
+    }else{
+        self.disTimeImg.hidden = NO;
     }
     NSArray *discountList = [model.discounttitle componentsSeparatedByString:@","];
     if (discountList.count>0) {

@@ -11,7 +11,7 @@
 @interface WDNearbyStoreModel : NSObject
 
 /** 属性*/
-@property(nonatomic, copy)NSString *storeid, *name, *distance, *img, *monthlysales, *startvalue, *startfee, *isown,*discounttitle,*isdiscount;
+@property(nonatomic, copy)NSString *storeid, *name, *distance, *img, *monthlysales, *startvalue, *startfee, *isown,*discounttitle,*isdiscount,*isDistributioning,*isDistributioningMsg,*storemodel,*isopen;
 @property(nonatomic,strong)NSDictionary *storesproducts;
 @property(nonatomic,assign)int star;
 @property(nonatomic,assign)BOOL isCloseDis;

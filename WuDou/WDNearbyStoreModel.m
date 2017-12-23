@@ -37,6 +37,10 @@
         }
         _isdiscount=[userDic[@"isdiscount"] copy];
         _star = [userDic[@"star"] intValue];
+        _isopen = [userDic[@"isopen"]copy];
+        _isDistributioning = [userDic[@"isDistributioning"]copy];
+        _isDistributioningMsg = [userDic[@"isDistributioningMsg"]copy];
+        _storemodel = [userDic[@"storemodel"]copy];
         self.storesproducts = [userDic[@"stores_products"] copy];
     }
     return self ;

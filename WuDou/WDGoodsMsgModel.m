@@ -25,6 +25,8 @@
         _monthlysales = [userDic[@"monthlysales"]copy];
         _images = [userDic[@"images"]copy];
         
+        
+        
     }
     return self ;
 }

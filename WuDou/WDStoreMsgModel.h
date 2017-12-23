@@ -11,7 +11,7 @@
 @interface WDStoreMsgModel : NSObject
 
 /** 属性*/
-@property(nonatomic, copy)NSString *storeid, *name, *img, *startvalue, *startfee, *starcount, *isopen;
+@property(nonatomic, copy)NSString *storeid, *name, *img, *startvalue, *startfee, *starcount, *isopen,*isDistributioning,*isDistributioningMsg,*storemodel;
 
 +(id)userWithDictionary:(NSDictionary*)userDic;
 -(id)initWithDictionary:(NSDictionary*)userDic;
