@@ -362,26 +362,29 @@
 }
 -(void)addBtnClicked:(WDSearchInfosModel *)good count:(NSString *)count indexPath:(NSIndexPath *)indexPath
 {
-    WDSearchInfosModel * goods = good;
-    WDStoreInfosModel *model1 = _storeModel;
-    WDChooseGood * good1 = [[WDChooseGood alloc]init];
-    good1.goodName = goods.name;
-    good1.goodNum = count;
-    good1.goodID = goods.pid;
-    good1.goodImage = goods.img;
-    good1.goodStartFee = model1.startvalue;
-    good1.goodDistributePrice = model1.startfee;
-    good1.goodPrice = goods.shopprice;
-    good1.shopID = self.storeId;
-    good1.shopName = model1.name;
-    good1.shopImage = model1.img;
-    if ([count intValue] == 1) {
-        [WDGoodList insertGood:good1];
-    }else{
-        [WDGoodList upDateGood:good1];
+    if ([self storeIsOpen] && [self storeOverDistance]) {
+        WDSearchInfosModel * goods = good;
+        WDStoreInfosModel *model1 = _storeModel;
+        WDChooseGood * good1 = [[WDChooseGood alloc]init];
+        good1.goodName = goods.name;
+        good1.goodNum = count;
+        good1.goodID = goods.pid;
+        good1.goodImage = goods.img;
+        good1.goodStartFee = model1.startvalue;
+        good1.goodDistributePrice = model1.startfee;
+        good1.goodPrice = goods.shopprice;
+        good1.shopID = self.storeId;
+        good1.shopName = model1.name;
+        good1.shopImage = model1.img;
+        if ([count intValue] == 1) {
+            [WDGoodList insertGood:good1];
+        }else{
+            [WDGoodList upDateGood:good1];
+        }
+        [self getAllMoney];
+        [self.goodsView setDataArray:_cateList selectList:_selectArray indexPath:indexPath];
     }
-    [self getAllMoney];
-    [self.goodsView setDataArray:_cateList selectList:_selectArray indexPath:indexPath];
+    
     
 }
 
@@ -593,11 +596,13 @@
             _storeModel = model;
             NSString *state = model.hasfavorite;
             _favoriteBtn.selected = [state boolValue];
+            [self checkIsOpen:model];
         }
         
         _cateList = array[1];
         [self getAllMoney];
         [self.tableView reloadData];
+        
         
         dispatch_async(dispatch_get_main_queue(), ^{
             //刷新完成
@@ -625,6 +630,44 @@
             return;
         }
     }];
+}
+- (BOOL)storeIsOpen{
+    if ([self.storeModel.isopen isEqualToString:@"1"]) {
+        return NO;
+    }
+    return YES;
+}
+-(BOOL)storeOverDistance{
+    if ([self.storeModel.isDistributioning isEqualToString:@"1"]) {
+        return NO;
+        
+    }
+    return YES;
+}
+- (void)checkIsOpen:(WDStoreInfosModel *)model
+{
+    if ([model.isopen isEqualToString:@"1"]) {
+        UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:@"本店已打烊" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alertView addAction:action];
+        [self presentViewController:alertView animated:YES completion:^{
+            
+        }];
+    }
+    
+    if ([model.isDistributioning isEqualToString:@"1"]) {
+        UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:model.isDistributioningMsg preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alertView addAction:action];
+        [self presentViewController:alertView animated:YES completion:^{
+            
+        }];
+    }
+   
 }
 - (void)getSelectArray{
     [_selectArray removeAllObjects];
@@ -856,20 +899,28 @@
 
 //设置底部按钮状态
 - (void)setFooterBtnState{
-    if (_allMoney>0)
-    {
-        _goOrderBtn.enabled = YES;
-        _goOrderBtn.backgroundColor = KSYSTEM_COLOR;
-        _goCarBtn.userInteractionEnabled = YES;
-        _goCarBtn.backgroundColor = KSYSTEM_COLOR;
-    }
-    else
-    {
+    if ([self storeIsOpen] && [self storeOverDistance]) {
+        if (_allMoney>0)
+        {
+            _goOrderBtn.enabled = YES;
+            _goOrderBtn.backgroundColor = KSYSTEM_COLOR;
+            _goCarBtn.userInteractionEnabled = YES;
+            _goCarBtn.backgroundColor = KSYSTEM_COLOR;
+        }
+        else
+        {
+            _goOrderBtn.enabled = NO;
+            _goOrderBtn.backgroundColor = [UIColor lightGrayColor];
+            _goCarBtn.userInteractionEnabled = NO;
+            _goCarBtn.backgroundColor = [UIColor lightGrayColor];
+        }
+    }else{
         _goOrderBtn.enabled = NO;
         _goOrderBtn.backgroundColor = [UIColor lightGrayColor];
         _goCarBtn.userInteractionEnabled = NO;
         _goCarBtn.backgroundColor = [UIColor lightGrayColor];
     }
+   
 }
 
 /** 聊天界面*/

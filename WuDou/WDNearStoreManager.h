@@ -44,7 +44,7 @@
 
 + (void)requestDiscountWithStoreId:(NSString *)storeId completion:(void(^)(NSMutableArray *array, NSString *error))complete;
 /** 提交订单*/
-+ (void)requestSubmitOrderWithAddressId:(NSString *)addressid autoTimeId:(NSString *)autotimeid orderInfo:(NSString *)orderinfo buyyerMark:(NSString *)mark completion:(void(^)(NSString *osn,NSString *paysn, NSString *error))complete;
++ (void)requestSubmitOrderWithAddressId:(NSString *)addressid autoTimeId:(NSString *)autotimeid couponId:(NSString *)couponId orderInfo:(NSString *)orderinfo buyyerMark:(NSString *)mark completion:(void(^)(NSString *osn,NSString *paysn, NSString *error))complete;
 
 /** 店铺详情编辑收藏*/
 + (void)requestEditCollectWithStoreorId:(NSString *)storeorid completion:(void(^)(NSString *state, NSString *error))complete;

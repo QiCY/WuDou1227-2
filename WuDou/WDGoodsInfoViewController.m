@@ -149,7 +149,7 @@ static NSString *cellId = @"WDUserJudgeCell";
                     [middleView sendSubviewToBack:noPriceView];
                     CGFloat totalPrice = [[price.text substringFromIndex:1] floatValue];
                     NSInteger newJiaGe = qisong - totalPrice;
-                    if (newJiaGe <= 0)
+                    if (newJiaGe <= 0 && [self checkStoreOpen] && [self checkStoreDistance])
                     {
                         qisongBtn.enabled = YES;
                         [qisongBtn setTitle:@"结算" forState:UIControlStateNormal];
@@ -337,7 +337,7 @@ static NSString *cellId = @"WDUserJudgeCell";
                 self.storeInfosModel = model;
             }
         }
-        
+        [self checkIsOpen:self.storeInfosModel];
         [self.tableView reloadData];
         
     }];
@@ -475,12 +475,68 @@ static NSString *cellId = @"WDUserJudgeCell";
 //  减号按钮
 - (void)subtractBtnAction:(UIButton *)subtract{
     
-    NSInteger count = [_goodsCount.text integerValue];
-    UILabel * countLabel = [self.view viewWithTag:345];
-    if (count > 0)
-    {
-        count --;
-        if (count == 0) {
+    if ([self checkStoreDistance] && [self checkStoreOpen]) {
+        NSInteger count = [_goodsCount.text integerValue];
+        UILabel * countLabel = [self.view viewWithTag:345];
+        if (count > 0)
+        {
+            count --;
+            if (count == 0) {
+                [middleView sendSubviewToBack:priceView];
+                [middleView bringSubviewToFront:noPriceView];
+                _goodsCount.text = [NSString stringWithFormat:@"0"];
+                countLabel.text = @"0";
+                
+                qisongBtn.enabled = NO;
+                qisongBtn.backgroundColor = [UIColor lightGrayColor];
+                [qisongBtn setTitle:@"去结算" forState:UIControlStateNormal];
+                
+                gotoCarBtn.enabled = NO;
+                gotoCarBtn.backgroundColor = [UIColor lightGrayColor];
+                
+                [WDGoodList deleteGoodWithGoodsId:[self.goodsInfosModel.pid intValue]];  // 当减到0时删除该商品id下的记录
+                return;
+            }
+            WDChooseGood * good = [[WDChooseGood alloc]init];
+            good.goodName = self.goodsInfosModel.name;
+            good.goodPrice = self.goodsInfosModel.shopprice;
+            good.goodNum = [NSString stringWithFormat:@"%ld",count];
+            good.goodID = self.goodsID;
+            good.goodImage = self.goodsImage;
+            good.goodStartFee = self.storeInfosModel.startvalue;
+            good.goodDistributePrice = self.storeInfosModel.startfee;
+            good.shopName = self.storeInfosModel.name;
+            good.shopID = self.storeInfosModel.storeid;
+            [WDGoodList upDateGood:good];  // 更新记录
+            
+            _goodsCount.text = [NSString stringWithFormat:@"%ld",(long)count];
+            CGFloat allCount = [self.goodsInfosModel.shopprice floatValue] * count;
+            price.text = [NSString stringWithFormat:@"￥%.2lf",allCount];
+            countLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
+            [middleView sendSubviewToBack:noPriceView];
+            [middleView bringSubviewToFront:priceView];
+            NSInteger newJiaGe = _jiaDeJiaGe - allCount;
+            if (newJiaGe <= 0 && [self checkStoreOpen] && [self checkStoreDistance])
+            {
+                qisongBtn.enabled = YES;
+                qisongBtn.backgroundColor =KSYSTEM_COLOR ;
+                [qisongBtn setTitle:@"结算" forState:UIControlStateNormal];
+                
+                gotoCarBtn.enabled = YES;
+                gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
+            }
+            else
+            {
+                qisongBtn.enabled = YES;
+                gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
+                [qisongBtn setTitle:[NSString stringWithFormat:@"结算"] forState:UIControlStateNormal];
+                
+                gotoCarBtn.enabled = YES;
+                gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
+            }
+        }
+        else
+        {
             [middleView sendSubviewToBack:priceView];
             [middleView bringSubviewToFront:noPriceView];
             _goodsCount.text = [NSString stringWithFormat:@"0"];
@@ -494,61 +550,34 @@ static NSString *cellId = @"WDUserJudgeCell";
             gotoCarBtn.backgroundColor = [UIColor lightGrayColor];
             
             [WDGoodList deleteGoodWithGoodsId:[self.goodsInfosModel.pid intValue]];  // 当减到0时删除该商品id下的记录
-            return;
-        }
-        WDChooseGood * good = [[WDChooseGood alloc]init];
-        good.goodName = self.goodsInfosModel.name;
-        good.goodPrice = self.goodsInfosModel.shopprice;
-        good.goodNum = [NSString stringWithFormat:@"%ld",count];
-        good.goodID = self.goodsID;
-        good.goodImage = self.goodsImage;
-        good.goodStartFee = self.storeInfosModel.startvalue;
-        good.goodDistributePrice = self.storeInfosModel.startfee;
-        good.shopName = self.storeInfosModel.name;
-        good.shopID = self.storeInfosModel.storeid;
-        [WDGoodList upDateGood:good];  // 更新记录
-        
-        _goodsCount.text = [NSString stringWithFormat:@"%ld",(long)count];
-        CGFloat allCount = [self.goodsInfosModel.shopprice floatValue] * count;
-        price.text = [NSString stringWithFormat:@"￥%.2lf",allCount];
-        countLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
-        [middleView sendSubviewToBack:noPriceView];
-        [middleView bringSubviewToFront:priceView];
-        NSInteger newJiaGe = _jiaDeJiaGe - allCount;
-        if (newJiaGe <= 0)
-        {
-            qisongBtn.enabled = YES;
-            qisongBtn.backgroundColor =KSYSTEM_COLOR ;
-            [qisongBtn setTitle:@"结算" forState:UIControlStateNormal];
-            
-            gotoCarBtn.enabled = YES;
-            gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
-        }
-        else
-        {
-            qisongBtn.enabled = YES;
-            gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
-            [qisongBtn setTitle:[NSString stringWithFormat:@"结算"] forState:UIControlStateNormal];
-            
-            gotoCarBtn.enabled = YES;
-            gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
         }
     }
-    else
-    {
-        [middleView sendSubviewToBack:priceView];
-        [middleView bringSubviewToFront:noPriceView];
-        _goodsCount.text = [NSString stringWithFormat:@"0"];
-        countLabel.text = @"0";
-        
-        qisongBtn.enabled = NO;
-        qisongBtn.backgroundColor = [UIColor lightGrayColor];
-        [qisongBtn setTitle:@"去结算" forState:UIControlStateNormal];
-        
-        gotoCarBtn.enabled = NO;
-        gotoCarBtn.backgroundColor = [UIColor lightGrayColor];
-        
-        [WDGoodList deleteGoodWithGoodsId:[self.goodsInfosModel.pid intValue]];  // 当减到0时删除该商品id下的记录
+    
+    
+}
+
+- (void)checkIsOpen:(WDStoreMsgModel *)model
+{
+    if ([model.isopen isEqualToString:@"1"]) {
+        UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:@"本店已打烊" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alertView addAction:action];
+        [self presentViewController:alertView animated:YES completion:^{
+            
+        }];
+    }
+    
+    if ([model.isDistributioning isEqualToString:@"1"]) {
+        UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:model.isDistributioningMsg preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alertView addAction:action];
+        [self presentViewController:alertView animated:YES completion:^{
+            
+        }];
     }
     
 }
@@ -556,80 +585,87 @@ static NSString *cellId = @"WDUserJudgeCell";
 //  加号按钮
 - (void)addBtnAction:(UIButton *)add{
     
-    NSInteger count = [_goodsCount.text integerValue];
-    UILabel * countLabel = [self.view viewWithTag:345];
-    if (count >= 0) {
-        
-        if (count == 0) {
-            count ++;
-            WDChooseGood * good = [[WDChooseGood alloc]init];
-            good.goodName = self.goodsInfosModel.name;
-            good.goodPrice = self.goodsInfosModel.shopprice;
-            good.goodNum = [NSString stringWithFormat:@"%ld",count];
-            good.goodID = self.goodsID;
-            good.goodImage = self.goodsImage;
-            good.goodStartFee = self.storeInfosModel.startvalue;
-            good.goodDistributePrice = self.storeInfosModel.startfee;
-            good.shopName = self.storeInfosModel.name;
-            good.shopID = self.storeInfosModel.storeid;
-            [WDGoodList insertGood:good];
-            NSLog(@"%@--%@--%@--%@--%@--%@--",good.goodName,good.goodPrice,good.goodNum,good.goodID,good.shopName,good.shopID);
-        }else{
-            count ++;
+    if ([self checkStoreDistance] && [self checkStoreOpen]) {
+        NSInteger count = [_goodsCount.text integerValue];
+        UILabel * countLabel = [self.view viewWithTag:345];
+        if (count >= 0) {
             
-            WDChooseGood * good = [[WDChooseGood alloc]init];
-            good.goodName = self.goodsInfosModel.name;
-            good.goodPrice = self.goodsInfosModel.shopprice;
-            good.goodNum = [NSString stringWithFormat:@"%ld",count];
-            good.goodID = self.goodsID;
-            good.goodImage = self.goodsImage;
-            good.goodStartFee = self.storeInfosModel.startvalue;
-            good.goodDistributePrice = self.storeInfosModel.startfee;
-            good.shopName = self.storeInfosModel.name;
-            good.shopID = self.storeInfosModel.storeid;
-            [WDGoodList upDateGood:good];  // 更新记录
-        }
-        
-        _goodsCount.text = [NSString stringWithFormat:@"%ld",(long)count];
-        CGFloat allCount = [self.goodsInfosModel.shopprice floatValue] * count;
-        price.text = [NSString stringWithFormat:@"￥%.2lf",allCount];
-        [middleView sendSubviewToBack:noPriceView];
-        [middleView bringSubviewToFront:priceView];
-        countLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
-        NSInteger newJiaGe = _jiaDeJiaGe - allCount;
-        if (newJiaGe <= 0)
-        {
-            qisongBtn.enabled = YES;
-            qisongBtn.backgroundColor = KSYSTEM_COLOR;
-            [qisongBtn setTitle:@"结算" forState:UIControlStateNormal];
+            if (count == 0) {
+                count ++;
+                WDChooseGood * good = [[WDChooseGood alloc]init];
+                good.goodName = self.goodsInfosModel.name;
+                good.goodPrice = self.goodsInfosModel.shopprice;
+                good.goodNum = [NSString stringWithFormat:@"%ld",count];
+                good.goodID = self.goodsID;
+                good.goodImage = self.goodsImage;
+                good.goodStartFee = self.storeInfosModel.startvalue;
+                good.goodDistributePrice = self.storeInfosModel.startfee;
+                good.shopName = self.storeInfosModel.name;
+                good.shopID = self.storeInfosModel.storeid;
+                [WDGoodList insertGood:good];
+                NSLog(@"%@--%@--%@--%@--%@--%@--",good.goodName,good.goodPrice,good.goodNum,good.goodID,good.shopName,good.shopID);
+            }else{
+                count ++;
+                
+                WDChooseGood * good = [[WDChooseGood alloc]init];
+                good.goodName = self.goodsInfosModel.name;
+                good.goodPrice = self.goodsInfosModel.shopprice;
+                good.goodNum = [NSString stringWithFormat:@"%ld",count];
+                good.goodID = self.goodsID;
+                good.goodImage = self.goodsImage;
+                good.goodStartFee = self.storeInfosModel.startvalue;
+                good.goodDistributePrice = self.storeInfosModel.startfee;
+                good.shopName = self.storeInfosModel.name;
+                good.shopID = self.storeInfosModel.storeid;
+                [WDGoodList upDateGood:good];  // 更新记录
+            }
             
-            gotoCarBtn.enabled = YES;
-            gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
+            _goodsCount.text = [NSString stringWithFormat:@"%ld",(long)count];
+            CGFloat allCount = [self.goodsInfosModel.shopprice floatValue] * count;
+            price.text = [NSString stringWithFormat:@"￥%.2lf",allCount];
+            [middleView sendSubviewToBack:noPriceView];
+            [middleView bringSubviewToFront:priceView];
+            countLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
+            NSInteger newJiaGe = _jiaDeJiaGe - allCount;
+            
+            if (newJiaGe <= 0 && [self checkStoreOpen] && [self checkStoreDistance])
+            {
+                qisongBtn.enabled = YES;
+                qisongBtn.backgroundColor = KSYSTEM_COLOR;
+                [qisongBtn setTitle:@"结算" forState:UIControlStateNormal];
+                
+                gotoCarBtn.enabled = YES;
+                gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
+            }
+            //        else
+            //        {
+            //
+            //            qisongBtn.enabled = YES;
+            //            qisongBtn.backgroundColor = KSYSTEM_COLOR;
+            //            [qisongBtn setTitle:@"结算" forState:UIControlStateNormal];
+            //
+            //            gotoCarBtn.enabled = YES;
+            //            gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
+            //
+            //        }
+            
         }
         else
         {
-//            qisongBtn.enabled = NO;
-//            qisongBtn.backgroundColor = [UIColor lightGrayColor];
-//            [qisongBtn setTitle:[NSString stringWithFormat:@"差￥%ld起送",(long)newJiaGe] forState:UIControlStateNormal];
-            qisongBtn.enabled = YES;
-            qisongBtn.backgroundColor = KSYSTEM_COLOR;
-            [qisongBtn setTitle:@"结算" forState:UIControlStateNormal];
+            [middleView sendSubviewToBack:priceView];
+            [middleView bringSubviewToFront:noPriceView];
             
-            gotoCarBtn.enabled = YES;
-            gotoCarBtn.backgroundColor =KSYSTEM_COLOR ;
-//            gotoCarBtn.enabled = NO;
-//            gotoCarBtn.backgroundColor = [UIColor lightGrayColor];
+            _count = count;
+            countLabel.text = [NSString stringWithFormat:@"%ld",(long)_count];
+            
+            qisongBtn.enabled = NO;
+            qisongBtn.backgroundColor = [UIColor lightGrayColor];
+            [qisongBtn setTitle:@"去结算" forState:UIControlStateNormal];
+            
+            gotoCarBtn.enabled = NO;
+            gotoCarBtn.backgroundColor = [UIColor lightGrayColor];
         }
-        
-    }
-    else
-    {
-        [middleView sendSubviewToBack:priceView];
-        [middleView bringSubviewToFront:noPriceView];
-        
-        _count = count;
-        countLabel.text = [NSString stringWithFormat:@"%ld",(long)_count];
-        
+    }else{
         qisongBtn.enabled = NO;
         qisongBtn.backgroundColor = [UIColor lightGrayColor];
         [qisongBtn setTitle:@"去结算" forState:UIControlStateNormal];
@@ -637,6 +673,7 @@ static NSString *cellId = @"WDUserJudgeCell";
         gotoCarBtn.enabled = NO;
         gotoCarBtn.backgroundColor = [UIColor lightGrayColor];
     }
+    
     
 }
 
@@ -932,6 +969,18 @@ static NSString *cellId = @"WDUserJudgeCell";
         }
     }];
     
+}
+- (BOOL)checkStoreOpen{
+    if ([self.storeInfosModel.isopen isEqualToString:@"1"]) {
+        return NO;
+    }
+    return YES;
+}
+- (BOOL)checkStoreDistance{
+    if ([self.storeInfosModel.isDistributioning isEqualToString:@"1"]) {
+        return NO;
+    }
+    return YES;
 }
 - (void)gotoCarBtnAction:(UIButton *)btn{
     

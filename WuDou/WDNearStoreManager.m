@@ -481,12 +481,13 @@
 }
 
 /** 提交订单*/
-+ (void)requestSubmitOrderWithAddressId:(NSString *)addressid autoTimeId:(NSString *)autotimeid orderInfo:(NSString *)orderinfo buyyerMark:(NSString *)mark completion:(void(^)(NSString *osn,NSString *paysn, NSString *error))complete{
++ (void)requestSubmitOrderWithAddressId:(NSString *)addressid autoTimeId:(NSString *)autotimeid couponId:(NSString *)couponId orderInfo:(NSString *)orderinfo buyyerMark:(NSString *)mark completion:(void(^)(NSString *osn,NSString *paysn, NSString *error))complete{
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"APP_ACCESS_TOKEN"];
-    NSString *urlStr = [NSString stringWithFormat:@"%@api/orders/SubmitOrder?access_token=%@&addressid=%@&autotimeid=%@&order_info=%@&buyerremark=%@",API_PORT,token,addressid,autotimeid,orderinfo,mark];
+    NSString *urlStr = [NSString stringWithFormat:@"%@api/orders/SubmitOrder?access_token=%@&addressid=%@&autotimeid=%@&order_info=%@&buyerremark=%@&couponid=%@",API_PORT,token,addressid,autotimeid,orderinfo,mark,couponId];
+    NSLog(@"submit order url is %@",urlStr);
     NSString *cordingStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [manager GET:cordingStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         

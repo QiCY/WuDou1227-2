@@ -27,6 +27,9 @@
         _startfee = [userDic[@"startfee"]copy];
         _starcount = [userDic[@"starcount"]copy];
         _isopen = [userDic[@"isopen"]copy];
+        _isDistributioning = [userDic[@"isDistributioning"]copy];
+        _isDistributioningMsg = [userDic[@"isDistributioningMsg"]copy];
+        _storemodel = [userDic[@"storemodel"]copy];
         
     }
     return self ;
